@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://classless.de/classless-tiny.css">
+    <title>Hoe maak ik een eventListener simpeler?</title>
+</head>
+
+<body>
+    <h1>Hoe maak ik een eventListener simpeler?</h1>
+
+<p>Als je zo een event listener aan een element toevoegt:</p>
+
+<p><code>jsx
+document.getElementById('nieuwste').addEventListener('change', function () {
+    filterLatestMovies()
+});
+</code></p>
+
+<p>Dan doet de functie die je geeft aan <code>addEventListener</code> niet zoveel, het is dan een doorgeefluik.</p>
+
+<p>Schrijf in plaats daarvan dan dit:</p>
+
+<p><code>jsx
+document.getElementById('nieuwste').addEventListener('change', filterLatestMovies);
+</code></p>
+
+
+</body>
+
+</html>

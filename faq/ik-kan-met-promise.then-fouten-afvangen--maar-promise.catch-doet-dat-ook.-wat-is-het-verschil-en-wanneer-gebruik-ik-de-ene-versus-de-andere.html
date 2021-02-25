@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://classless.de/classless-tiny.css">
+    <title>Ik kan met promise.then fouten afvangen, maar promise.catch doet dat ook. Wat is het verschil en wanneer gebruik ik de ene versus de andere?</title>
+</head>
+
+<body>
+    <h1>wanneer gebruik ik promise.then versus promise.catch?</h1>
+
+<p>Als je een foutafhandelfunctie meegeeft aan .then dan vangt die alleen de error af voor die ene promise. Als je maar 1 promise gebruikt dan is dat handig.</p>
+
+<p>Als je promises gaat chainen dan is het handig om .catch te gebruiken, die vangt dan alle errors af van alle daarvoor gechainde promises. Dan hoef je je errorafvang functie niet herhaaldelijk door te geven.</p>
+
+<p>Zie https://github.com/WincAcademy/gists/tree/master/promises_vraag1</p>
+
+
+</body>
+
+</html>

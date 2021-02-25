@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://classless.de/classless-tiny.css">
+    <title>Hoe gebruik ik meerdere JavaScript files?</title>
+</head>
+
+<body>
+    <h1>Hoe gebruik ik meerdere JavaScript files?</h1>
+
+<p>Als je wat meer code gaat schrijven kan het handig en verstandig zijn om je code op te splitsen in meerdere files.</p>
+
+<p>Dat kan op meerdere manieren. Kies wel altijd maar één manier :-)</p>
+
+<h2>In een HTML pagina</h2>
+
+<p>Als je een HTML pagina hebt dan is de simpelste manier om meerdere JavaScript files in te laden de volgende. In de <code>&lt;head&gt;</code>van je pagina zet je twee <code>&lt;script&gt;</code> tags, zoals hieronder:</p>
+
+<p>```html</p>
+
+<script defer src='script1.js'></script>
+
+<script defer src='script2.js'></script>
+
+<p>```</p>
+
+<p>Let op de volgorde, als je in <code>script2.js</code> iets wil gebruiken dat in <code>script1.js</code> staat moet je ze ook in die volgorde in je HTML zetten.</p>
+
+<h2>In een Node.js script</h2>
+
+<p>In een Node.js script, zonder website of HTML in de buurt, kun je geen HTML tags gebruiken.</p>
+
+<p>We draaien altijd één script met Node, laten we die <code>main.js</code> noemen. Dus dat wordt:</p>
+
+<p><code>$ node main.js</code></p>
+
+<p>Maar als we nou een andere JavaScript file hebben waarvan we willen dat <code>main.js</code> daar gebruik van kan maken dan moeten we twee stappen nemen:</p>
+
+<ol>
+<li>de file die we willen inladen moet iets 'exporten', zie onder</li>
+<li>de file die een andere file wil inladen moet 'requiren'</li>
+</ol>
+
+<p>```jsx
+// vegetables.js
+const vegetables = ['peas', 'corn', 'potatoes'];</p>
+
+<p>module.exports = {vegetables};
+```</p>
+
+<p>```jsx
+// main.js
+const vegetablesModule = require('./vegetables.js');
+const vegetables = vegetablesModule.vegetables;</p>
+
+<p>console.log('De eerste groente is:');
+console.log(vegetables[0]);
+```</p>
+
+<h2>In een React applicatie</h2>
+
+<p>In een React applicatie volg je het patroon dat je ziet als je <code>create-react-app</code> draait.</p>
+
+
+</body>
+
+</html>

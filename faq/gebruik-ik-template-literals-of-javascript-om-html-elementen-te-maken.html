@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://classless.de/classless-tiny.css">
+    <title>Gebruik ik template literals of JavaScript om HTML elementen te maken?</title>
+</head>
+
+<body>
+    <h1>Gebruik ik template literals of JavaScript om HTML elementen te maken?</h1>
+
+<p>Als je in JavaScript nieuwe HTML elementen wil maken om ze aan de DOM toe te voegen kan dat op verschillende manieren:</p>
+
+<ol>
+<li>template literals</li>
+<li>document.createElement</li>
+</ol>
+
+<p>Het is weer een stukje legacy van JavaScript en heeft te maken met de <strong>backwards compatibility.</strong> </p>
+
+<p>Template literals zijn een nieuwe frisse manier om complexe html element in JS snel te kunnen schrijven. In plaats van regel voor regel net JavaScript “document.createElement”, etc, etc, etc. Want dat voelt een beetje als overbodig en veel handmatig werk</p>
+
+<p>Beide manieren zijn dus goed:
+D<strong>e JavaScript manier</strong> is de 'oude' en 'robuuste' way-of-working. 
+<strong>Template literals</strong> zijn de 'snelle' en 'nieuwe' manier. </p>
+
+<p><strong>Welke moet ik dan gebruiken?</strong>
+Het antwoord is: it depends. 
+Voor beide methodes is wat te zeggen, maar wij raden template literals aan (tenzij je IE11 of ouder moet ondersteunen).
+Waarom? Het leest wat lekkerder en het is minder code, en minder code = minder bugs.</p>
+
+<blockquote>
+  <p>Lees hier een gehele blog van Wes Bos over waarom template literals fijn zijn: <a href="https://wesbos.com/template-strings-html">https://wesbos.com/template-strings-html</a></p>
+</blockquote>
+
+<p>Template literals/strings kun je (nog) niet gebruiken in IE11 <a href="https://caniuse.com/#feat=template-literals">https://caniuse.com/#feat=template-literals</a>. </p>
+
+<p><strong>Zie ook</strong>: <a href="https://medium.com/@tforward/get-html-to-the-dom-fast-with-js-template-literals-insertadjacenthtml-24b8aa4e8807">https://medium.com/@tforward/get-html-to-the-dom-fast-with-js-template-literals-insertadjacenthtml-24b8aa4e8807</a></p>
+
+<p>Hieronder een voorbeeld om dit element te maken en vast te maken aan de ul.</p>
+
+<p><code>html
+&lt;li class='status'&gt; 
+  &lt;p&gt;Mijn Nieuwe Taak&lt;/p&gt;
+  &lt;img src='trash-delete-icon.jpg' alt='delete icon'/&gt;
+&lt;/li&gt;
+</code></p>
+
+<p><code>jsx
+const list = document.querySelector('#list')
+let newLi = document.createElement('li')
+newLi.setAttribute('class', status)
+let newImg = document.createElement('img')    
+newImg.setAttribute('alt', 'delete icon');
+newImg.setAttribute('src', 'trash-delete-icon.jpg');
+let newText = document.createElement('p')
+newText.innerHTML = task;
+newLi.appendChild(newText);
+newLi.appendChild(newImg);
+list.appendChild(newLi).
+</code></p>
+
+<p><strong>Alternatief met template literals:</strong></p>
+
+<p><code>jsx
+const list = document.querySelector('#list');
+const listItemRaw = `
+  &lt;li class='status'&gt;
+    &lt;p&gt;${task}&lt;/p&gt;
+    &lt;img src='trash-delete-icon.jpg' alt='delete icon'/&gt;
+  &lt;/li&gt;
+`;
+list.insertAdjacentHTML('beforeend', listItemRaw);
+</code></p>
+
+
+</body>
+
+</html>

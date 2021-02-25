@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://classless.de/classless-tiny.css">
+    <title>Waarom zijn globale variabelen gevaarlijk?</title>
+</head>
+
+<body>
+    <h1>Waarom zijn globale variabelen gevaarlijk?</h1>
+
+<p><a href="wat-zijn-globale-variabelen.html">Wat zijn globale variabelen?</a></p>
+
+<p>Maar waarom zijn ze gevaarlijk?</p>
+
+<p>Dat heeft te maken met <em>voorspelbaarheid.</em> Als je een functie aanroept wil je er van uit kunnen gaan dat die functie hetzelfde doet. Wat die functie <em>verandert</em> in de wereld of wat die functie <em>produceert</em> (terug geeft) moet makkelijk voorspelbaar zijn.</p>
+
+<p>Als een functie gebruik maakt van globale variabelen dan moet je eerst weten wat die globale variabelen zijn voordat je kan <em>voorspellen</em> wat die functie precies gaat doen.</p>
+
+<p>Anders gezegd, bij een functie die gebruik maakt van globale variabelen is het:</p>
+
+<ul>
+<li>moeilijk(er) te voorspellen wat die precies gaat doen</li>
+<li>moeilijker om over die functie en de code eromheen na te denken (omdat je altijd rekening moet houden met die global variables)</li>
+<li>testen van die functie een flink stuk moeilijker</li>
+</ul>
+
+<p>Bij dit stuk code geeft <code>readFoo()</code> de 1e en 2e keer iets anders terug omdat we de global variable gebruiken.</p>
+
+<p>```jsx
+let foo = 3;</p>
+
+<p>const readFoo = () =&gt; {
+  console.log(foo);
+};</p>
+
+<p>const changeFoo = () =&gt; {
+  foo = 30;
+};</p>
+
+<p>readFoo(); // 3
+changeFoo();</p>
+
+<p>// Heel
+// Veel
+// Andere
+// Code</p>
+
+<p>readFoo(); // 30
+```</p>
+
+<p>Maar hoe schrijf je je code dan? →</p>
+
+<p><a href="waarom-is-het-goed-om-functies-alles-mee-te-geven-dat-ze-nodig-hebben.html">Waarom is het goed om functies alles mee te geven dat ze nodig hebben?</a></p>
+
+<p><a href="hoe-verander-ik-mijn-code-om-geen-globals-meer-te-gebruiken.html">Hoe verander ik mijn code om geen globals meer te gebruiken?</a></p>
+
+<h2>Lees meer</h2>
+
+<p><a href="https://wiki.c2.com/?GlobalVariablesAreBad"></a></p>
+
+
+</body>
+
+</html>

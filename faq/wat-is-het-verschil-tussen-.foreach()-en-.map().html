@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://classless.de/classless-tiny.css">
+    <title>Wat is het verschil tussen .forEach() en .map()?</title>
+</head>
+
+<body>
+    <h1>Wat is het verschil tussen .forEach() en .map()?</h1>
+
+<h2>Het korte antwoord</h2>
+
+<ul>
+<li>wil je een nieuw array maken? ➡️ <code>array.map()</code></li>
+<li>wil je loopen zonder een nieuw array te maken? ➡️ <code>array.forEach()</code></li>
+</ul>
+
+<h2>Het lange antwoord</h2>
+
+<p><code>array.forEach()</code> gebruik je vooral als vervanging van de standaard 'loopjes' dus de for loop en de while loop.  In de <code>array.forEach()</code> loop geef je dan een stukje code mee die voor elk item in de array wordt uitgevoerd. Nadat dit stukje code voor elk item uit de array is uitgevoerd, zal de <code>array.forEach()</code> functie altijd <code>undefined</code> teruggeven als return value. Dit komt omdat er niks wordt 'teruggegeven', er wordt alleen iets 'uitgevoerd'.</p>
+
+<p>Voorbeeld:</p>
+
+<p>```jsx
+const myArray = [1, 2, 3];</p>
+
+<p>myArray.forEach(arrayItem =&gt; {
+    console.log('Hallo, de waarde van de huidige loop is', arrayItem);
+})</p>
+
+<p>// Verwachtte uitkomst:
+// 'Hallo, de waarde van de huidige loop is 1'
+// 'Hallo, de waarde van de huidige loop is 2'
+// 'Hallo, de waarde van de huidige loop is 3'
+// Return value: undefined
+```</p>
+
+<p><code>array.map()</code> gebruik je als je een nieuwe array wilt creëren op basis van een bestaande array. Deze heeft wel altijd een return value: namelijk de nieuwe array.</p>
+
+<p>Voorbeeld:</p>
+
+<p>```jsx
+const myArray = [1, 2, 3];</p>
+
+<p>const doubleValueArray = myArray.map(arrayItem =&gt; arrayItem * 2);</p>
+
+<p>console.log(doubleValueArray);</p>
+
+<p>// Verwachte uitkomst:
+// [2, 4, 6]
+```</p>
+
+<p>Het heeft dus weinig zin om een nieuwe variabele te assignen aan een forEach loop, zoals op deze manier:</p>
+
+<p>```jsx
+const doubleValueArray = array =&gt; array.forEach(element =&gt; {
+    console.log(element *2);
+});</p>
+
+<p>console.log(doubleArrayValues([1, 2, 3]));
+// undefined
+```</p>
+
+<p>Omdat de <code>forEach()</code> loop uit zichzelf geen nieuwe array returned, krijg je hier als return value <code>undefined</code>. Je schrijft hier namelijk een functie genaamd <code>doubleValueArray</code> die eigenlijk precies hetzelfde doet als wat de <code>array.forEach()</code> functie doet. Dat is dus overbodig.</p>
+
+<p>Wel is het goed om in gedachten te houden dat je met de <code>array.orEach()</code> functie alles kan doen wat je met een <code>.map()</code> functie doet, maar dan zou je er veel meer code omheen moeten schrijven. </p>
+
+<p>Check voor een nog uitgebreider antwoord de volgende link: <a href="https://stackoverflow.com/questions/34426458/javascript-difference-between-foreach-and-map#34426481">https://stackoverflow.com/questions/34426458/javascript-difference-between-foreach-and-map#34426481</a></p>
+
+
+</body>
+
+</html>

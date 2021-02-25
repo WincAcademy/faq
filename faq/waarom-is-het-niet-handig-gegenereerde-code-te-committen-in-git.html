@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://classless.de/classless-tiny.css">
+    <title>Waarom is het niet handig 'gegenereerde code' te committen in Git?</title>
+</head>
+
+<body>
+    <h1>Waarom is het niet handig 'gegenereerde code' te committen in Git?</h1>
+
+<p>De vuistregel is eigenlijk: </p>
+
+<blockquote>
+  <p>In je repository moet alleen de informatie/code staan die nodig is om aan je project te werken.</p>
+</blockquote>
+
+<p>Dit betekent dus dat als je Sass of Less gebruikt je alleen de originele files wil opslaan en dus <strong>niet</strong> de gegenereerde CSS files en ook niet de .css.map files.</p>
+
+<h2>Waarom?</h2>
+
+<p>Als je commits bekijkt in de history van je repository wil je alleen de relevante veranderingen zien. Als je project op een of andere manier code genereert dan komen die veranderingen ook soms mee in de commits. Dat maakt commits 'noisy' omdat je dan op het oog moet gaan onderscheiden wat wel en niet belangrijk is.</p>
+
+<h2>Hoe?</h2>
+
+<p>De oplossing is gelukkig simpel: gebruik <code>.gitignore</code> om gegenereerde files of hele directories met gegenereerde files te negeren.</p>
+
+
+</body>
+
+</html>

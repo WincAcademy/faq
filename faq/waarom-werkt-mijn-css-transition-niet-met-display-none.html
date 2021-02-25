@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://classless.de/classless-tiny.css">
+    <title>Waarom werkt mijn CSS transition niet met display:none?</title>
+</head>
+
+<body>
+    <h1>Waarom werkt mijn CSS transition niet met display:none?</h1>
+
+<p>Om een transition te kunnen maken moet de browser een pad kunnen berekenen tussen punt A en punt B.</p>
+
+<ul>
+<li>Bij een transform in positie is dat logisch: een rechte lijn.</li>
+<li>Bij een transform in kleur is dat te berekenen: alle tussenkleuren</li>
+<li>Bij een transform in transparantie (opacity) is dat: van transparantie A naar B (0 naar 100 bijv).</li>
+</ul>
+
+<p>Maar als een element niet zichtbaar is: met <code>display: none</code> en het moet dan naar <code>display: block</code> of een andere waarde dan is er niet echt een pad te vinden. De display property is als een lichtknopje: aan of uit. En veel andere properties zijn als een dimmer: met allemaal tussenstanden.</p>
+
+<p>Als je elementen soepel wil laten verschijnen en verdwijnen maak dan gebruik van de opacity property.</p>
+
+
+</body>
+
+</html>

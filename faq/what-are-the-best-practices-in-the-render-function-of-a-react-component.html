@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://classless.de/classless-tiny.css">
+    <title>What are the best practices in the render function of a React component?</title>
+</head>
+
+<body>
+    <h1>What are the best practices in the render function of a React component?</h1>
+
+<p>You should try to keep your render functions simple and clean.</p>
+
+<p>Don't</p>
+
+<ul>
+<li>define functions inside of the render method (they'll be defined again and again, making your code less fast)</li>
+<li>put a lot of logic in your render function, some conditionals are fine, but do complex data transformations outside of the render function to make it easier to test</li>
+</ul>
+
+
+</body>
+
+</html>

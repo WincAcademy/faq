@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://classless.de/classless-tiny.css">
+    <title>waarom zou je string interpolation (template literals) gebruiken?</title>
+</head>
+
+<body>
+    <h1>waarom zou je string interpolation (template literals) gebruiken?</h1>
+
+<p>Dit is string interpolation: </p>
+
+<p><code>jsx
+let title = 'Mrs.';
+let name = 'Doubtfire';
+let greeting = `Dear ${title} ${name}`; // 'Dear Mrs. Doubtfire'
+</code></p>
+
+<p>Als je strings en variabelen wil combineren tot één lange string kan dat het beste met 'string interpolation'.</p>
+
+<p>Deze manier van strings en variabelen combineren is meestal leesbaarder en makkelijker onderhoudbaar dan bijv string concatenatie.</p>
+
+<p>Meer info:
+<a href="https://campushippo.com/lessons/how-to-do-string-interpolation-with-javascript-7854ef9d">https://campushippo.com/lessons/how-to-do-string-interpolation-with-javascript-7854ef9d</a></p>
+
+<p>Hoe ze te gebruiken? →
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals</a></p>
+
+<p>⚠️ Let op: als je maar één string hebt kun je gewoon die string gebruiken dan hoef je niet te interpoleren:</p>
+
+<p><code>jsx
+let name = 'Fresh Prince';
+console.log(`${name}`); // 'Fresh Prince' (overbodig gebruik van interpolatie)
+console.log(name); // 'Fresh Prince'
+</code></p>
+
+
+</body>
+
+</html>
