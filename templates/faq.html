@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<section>
+    <table id="faqtable" class="display compact">
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for page in section.pages %}
+            <tr>
+                <td><a class="capitalize" href="{{ page.permalink | safe }}">{{ page.title }}</a></td>
+                <td data-orderable="false">
+                    {% for tag in page.extra.tags %}
+                    <label class="tag {{tag}}">{{tag}}</label>
+                    {% endfor %}
+
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('#faqtable').DataTable({
+            "paging": false,
+            "order": [[0, "asc"]]
+        });
+    });
+</script>
+
+{% endblock content %}
