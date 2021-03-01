@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="wat-zijn-globale-variabelen">Wat zijn globale variabelen?</h1>
+<p>Het korte antwoord: globale variabelen zijn variabelen die <em>buiten</em> functies zijn gemaakt. Vanwege de 'scope' regels in JavaScript kan alle code bij die globale variabelen en ze dus ook lezen én aanpassen. Voorbeeld:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let foo = 3;
+
+const readFoo = () =&gt; {
+  console.log(foo);
+};
+
+const changeFoo = () =&gt; {
+  foo = 30;
+};
+
+readFoo(); // 3
+changeFoo();
+
+// Heel
+// Veel
+// Andere
+// Code
+
+readFoo(); // 30
+</span></code></pre>
+<p>Zie ook </p>
+<p><a href="https://www.notion.so/JS-Scoping-global-vs-local-scope-e38aed4fecae4ce48c5736013319935c">JS: Scoping: global vs local scope</a></p>
+<p><a href="https://faq.wincacademy.nl/waarom-zijn-globale-variabelen-gevaarlijk/">Waarom zijn globale variabelen gevaarlijk?</a></p>
+<p>Hoe voorkom je dat je globale variabelen nodig hebt? →</p>
+<p><a href="https://faq.wincacademy.nl/waarom-is-het-goed-om-functies-alles-mee-te-geven-dat-ze-nodig-hebben/">Waarom is het goed om functies alles mee te geven dat ze nodig hebben?</a></p>
+
+
+
+</body>
+
+</html>

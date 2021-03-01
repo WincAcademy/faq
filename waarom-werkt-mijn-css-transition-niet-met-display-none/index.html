@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="waarom-werkt-mijn-css-transition-niet-met-display-none">Waarom werkt mijn CSS transition niet met display:none?</h1>
+<p>Om een transition te kunnen maken moet de browser een pad kunnen berekenen tussen punt A en punt B.</p>
+<ul>
+<li>Bij een transform in positie is dat logisch: een rechte lijn.</li>
+<li>Bij een transform in kleur is dat te berekenen: alle tussenkleuren</li>
+<li>Bij een transform in transparantie (opacity) is dat: van transparantie A naar B (0 naar 100 bijv).</li>
+</ul>
+<p>Maar als een element niet zichtbaar is: met <code>display: none</code> en het moet dan naar <code>display: block</code> of een andere waarde dan is er niet echt een pad te vinden. De display property is als een lichtknopje: aan of uit. En veel andere properties zijn als een dimmer: met allemaal tussenstanden.</p>
+<p>Als je elementen soepel wil laten verschijnen en verdwijnen maak dan gebruik van de opacity property.</p>
+
+
+
+</body>
+
+</html>

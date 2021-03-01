@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="waarom-is-het-niet-handig-een-functie-maar-een-keer-te-gebruiken">Waarom is het niet handig een functie maar één keer te gebruiken?</h1>
+<p>Functies zijn ontzettend handig en je gaat ze heel vaak gebruiken. Maar soms heb je geen functie nodig.</p>
+<p>Sommige mensen willen nog wel eens dit soort code schrijven:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const addEventListenerToButton = function() {
+  const button = document.querySelector(&#39;button&#39;);
+  button.addEventListener(&#39;click&#39;, function() {
+    console.log(&#39;I was clicked&#39;);
+  });
+};
+addEventListenerToButton();
+</span></code></pre>
+<p>Nu werkt die code wel, maar zo'n functie is (vaak) overbodig omdat we die functie:</p>
+<ul>
+<li>maar één keer aanroepen</li>
+<li>direct nadat we de functie maken.</li>
+</ul>
+<p>Dus even terug naar 'waarom zou ik een functie gebruiken?'</p>
+<p>Functies zijn handig als je:</p>
+<ul>
+<li>een stuk code meerdere keren wil gebruiken (zo blijft je code DRY)</li>
+<li>een stuk code <em>dynamisch</em> wil gebruiken, dus meerdere keren, maar elke keer nét een beetje anders</li>
+<li>je voor de duidelijkheid een aantal regels code een goede naam wil geven</li>
+<li>(en nog een aantal andere redenen die wat technischer zijn, zoals scope, functies-als-variabelen etc)</li>
+</ul>
+<p>Het voorbeeld hierboven kan ook zo geschreven worden:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const button = document.querySelector(&#39;button&#39;);
+button.addEventListener(&#39;click&#39;, function() {
+  console.log(&#39;I was clicked&#39;);
+});
+</span></code></pre>
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="react-how-to-give-a-unique-id-to-each-child-element">React: how to give a unique id to each child element?</h1>
+<p>When you want to render a list of items in React you need to provide each item a unique key, the why is explained here.</p>
+<p><a href="https://reactjs.org/docs/lists-and-keys.html">Lists and Keys - React</a></p>
+<p>So what key should you use?</p>
+<h2 id="don-t-use-the-index">Don't use the index</h2>
+<p>It might be tempting to use the index of the item in the array of items you're rendering, but that will lead to certain issues.</p>
+<p>Read this article for more info:</p>
+<p><a href="https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318">Index as a key is an anti-pattern</a></p>
+<p>Or see this video:</p>
+<p><a href="https://youtu.be/xlPxnc5uUPQ">ReactJS Tutorial - 19 - Index as Key Anti-pattern</a></p>
+<h2 id="best-practice">Best practice</h2>
+<p>If you <em>can</em> generate a unique value from the thing you're displaying you can do that. If you cannot you should use a library that can generate unique id's. For example:</p>
+<p><a href="https://www.npmjs.com/package/nanoid">nanoid</a></p>
+
+
+
+</body>
+
+</html>

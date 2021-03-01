@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="wat-is-het-verschill-tussen-slice-en-splice">Wat is het verschill tussen slice() en splice()?</h1>
+<p>Splice muteert de orginele array en Slice laat de orginele array onveranderd</p>
+<p>Slice en Splice zijn standaard JavaScript Array methods. Voor beide methods zijn valide use-cases, maar belangrijk is dat je het verschil begrijpt (hint: <strong>mutability</strong>).</p>
+<h3 id="splice">Splice</h3>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let array = [1, 2, 3, 4, 5];
+let part = array.splice(2);
+
+console.log(part); // outputs [3, 4, 5]
+</span></code></pre>
+<p><code>.splice()</code> <strong>muteert</strong> de orginele array en geeft de waardes <code>[3, 4, 5]</code> terug als een array van nummers. Door de mutatie is de orginele array veranderd:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">console.log(array); // outputs [1, 2]
+</span></code></pre>
+<p>Raadpleeg de <a href="https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">documentatie van Array.splice</a></p>
+<h3 id="slice">Slice</h3>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let array = [1, 2, 3, 4, 5];
+let part = array.slice(2);
+
+console.log(part); // outputs [3, 4, 5]
+</span></code></pre>
+<p><code>.slice()</code> geeft de waardes <code>[3, 4, 5]</code> terug als een array van nummers. Door orginele array is onveranderd gebleven:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">console.log(array); // outputs [1, 2, 3, 4, 5]
+</span></code></pre>
+<p>Raadpleeg de <a href="https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">documentatie van Array.slice</a></p>
+
+
+
+</body>
+
+</html>

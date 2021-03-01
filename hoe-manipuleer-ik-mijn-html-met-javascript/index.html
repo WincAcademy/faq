@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="hoe-manipuleer-ik-mijn-html-met-javascript">Hoe manipuleer ik mijn HTML met JavaScript?</h1>
+<p>Bij het ontwikkelen van een website of app, zal je regelmatig de documentstructuur van je site willen manipuleren. Dit doen we met het Document Object Model (DOM). Met de API (objects en methodes) van het DOM kunnen we de HTML van onze pagina manipuleren en maken we statische pagina's dynamisch.</p>
+<p>Voordat je begint met het manipuleren van het DOM is het belangrijke om te beginnen met een statische opzet. Zorg ervoor dat je eerst de gewenste HTML en CSS uitschrijft voordat je interactie toevoegd. Denk goed na over welke HTML elementen je gebruikt en wat het eindresultaat moet zijn.</p>
+<h2 id="praktijkvoorbeeld">Praktijkvoorbeeld</h2>
+<p>Je gaat een nieuw winkelwagentje bouwen voor de webshop <a href="http://bell.com/">bell.com</a>. De producten van de klant worden opgehaald via een REST API en zijn tot je beschikking in de vorm van een JavaScript array.</p>
+<p>De HTML structuur van het winkelwagentje ziet er als volg uit:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-html" data-lang="html"><span style="color:#c0c5ce;">&lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">cart</span><span style="color:#c0c5ce;">&#39;&gt;
+    &lt;</span><span style="color:#bf616a;">h3</span><span style="color:#c0c5ce;">&gt;Mijn winkelwagentje&lt;/</span><span style="color:#bf616a;">h3</span><span style="color:#c0c5ce;">&gt;
+    &lt;</span><span style="color:#bf616a;">ul </span><span style="color:#d08770;">class</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">products</span><span style="color:#c0c5ce;">&#39;&gt;&lt;/</span><span style="color:#bf616a;">ul</span><span style="color:#c0c5ce;">&gt;
+&lt;/</span><span style="color:#bf616a;">div</span><span style="color:#c0c5ce;">&gt;
+</span></code></pre>
+<p>De array met producten ziet er als volgt uit:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const products = [
+    {
+        name: &#39;Macbook Pro&#39;,
+        price: 2849.99,
+        brand: &#39;Apple&#39;
+    },
+    {
+        name: &#39;Windows Surface Pro&#39;,
+        price: 2750.00,
+        brand: &#39;Microsoft&#39;
+    },
+    {
+        name: &#39;Asus Ultrabook&#39;,
+        price: 1680.80,
+        brand: &#39;Asus&#39;
+    }
+]
+</span></code></pre>
+<p>Nu kunnen we de DOM manipuleren met JavaScript zodat de producten van de klant worden getoond in het lijstje (<code>ul.products</code>) van het winkelwagentje:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const itemsInCart = document.querySelector(&#39;.products&#39;);
+
+// (1) loop door de producten
+products.forEach((product) =&gt; {
+    // (2) maak een nieuw &lt;li&gt; element aan
+    const li = document.createElement(&#39;li&#39;);
+
+    // (3) voeg de producttekst toe aan het element
+    li.innerText = `${product.name} (€${product.price})`;
+
+    // (4) voeg het element toe aan de lijst van het winkelwagentje
+    itemsInCart.appendChild(li);
+});
+</span></code></pre>
+<p>Het eindresultaat ziet er als volgt uit:</p>
+<p><img src="@/winkelwagentje.png" alt="winkelwagentje.png" /></p>
+<p>Dit is een simpel voorbeeld, maar de mogelijkheden zijn eindeloos. Door gebruik te maken van de DOM-objecten (zoals <code>document</code>) kunnen we verschillende methods aanroepen om elementen te selecteren, creëren en manipuleren. Exploreer en experimenteer!</p>
+<h2 id="handige-links">Handige links</h2>
+<p>Voor nog veel meer informatie over de DOM en hoe je daar dingen mee kan doen:</p>
+<p><a href="https://www.notion.so/Javascript-6008467c99cd49eca1f3ba6b167ccafb">Javascript  </a></p>
+<p><a href="https://www.w3schools.com/js/js_htmldom.asp">JavaScript HTML DOM</a></p>
+<p><a href="https://developer.mozilla.org/nl/docs/Learn/JavaScript/Client-side_web_APIs/Manipuleren_documenten">Documenten manipuleren</a></p>
+<p><a href="https://www.youtube.com/results?search_query=dom+manipulation">dom manipulation - YouTube</a></p>
+
+
+
+</body>
+
+</html>

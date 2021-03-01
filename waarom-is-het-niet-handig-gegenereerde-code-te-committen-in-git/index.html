@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="waarom-is-het-niet-handig-gegenereerde-code-te-committen-in-git">Waarom is het niet handig 'gegenereerde code' te committen in Git?</h1>
+<p>De vuistregel is eigenlijk: </p>
+<blockquote>
+<p>In je repository moet alleen de informatie/code staan die nodig is om aan je project te werken.</p>
+</blockquote>
+<p>Dit betekent dus dat als je Sass of Less gebruikt je alleen de originele files wil opslaan en dus <strong>niet</strong> de gegenereerde CSS files en ook niet de .css.map files.</p>
+<h2 id="waarom">Waarom?</h2>
+<p>Als je commits bekijkt in de history van je repository wil je alleen de relevante veranderingen zien. Als je project op een of andere manier code genereert dan komen die veranderingen ook soms mee in de commits. Dat maakt commits 'noisy' omdat je dan op het oog moet gaan onderscheiden wat wel en niet belangrijk is.</p>
+<h2 id="hoe">Hoe?</h2>
+<p>De oplossing is gelukkig simpel: gebruik <code>.gitignore</code> om gegenereerde files of hele directories met gegenereerde files te negeren.</p>
+
+
+
+</body>
+
+</html>

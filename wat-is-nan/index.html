@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="wat-is-nan">Wat is NaN?</h1>
+<p>Zie https://javascript.info/types</p>
+<p><code>NaN</code> is een standaard JavaScript eigenschap van het type <code>Number</code>  en staat voor '<strong>Not-A-Number</strong>'.</p>
+<p><strong>Hoe controleer ik of een waarde gelijk is aan</strong> <code>NaN</code> <strong>?</strong></p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const waarde = NaN;
+
+if (Number.isNan(waarde)) {
+    console.log(&#39;De waarde is NaN&#39;);
+}
+</span></code></pre>
+
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="waarom-is-het-goed-om-functies-alles-mee-te-geven-dat-ze-nodig-hebben">Waarom is het goed om functies alles mee te geven dat ze nodig hebben?</h1>
+<p>Lees eerst deze vraag:</p>
+<p><a href="https://faq.wincacademy.nl/waarom-zijn-globale-variabelen-gevaarlijk/">Waarom zijn globale variabelen gevaarlijk?</a></p>
+<p>Nu is het niet alleen zo dat globale variabelen gevaarlijk of onhandig kunnen zijn. Dat kan ook gelden in een meer 'lokale' scope. Zie dit voorbeeld:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">console.log(&#39;---&#39;);
+const langeFunctie = () =&gt; {
+  let bar = 5;
+
+  const readBar = () =&gt; {
+    console.log(bar);
+  };
+
+  const changeBar = () =&gt; {
+    bar = 50;
+  };
+
+  readBar(); // 5
+  changeBar();
+
+  // Heel
+  // Veel
+  // Andere
+  // Code
+
+  readBar(); // 50
+};
+
+langeFunctie();
+</span></code></pre>
+<p>Hier is <code>bar</code> een lokale variabele. Maar de functie readBar kijkt als het ware om zich heen om diens werk te kunnen doen. Dus readBar kijkt <em>in de omliggende scope</em> voor bar.</p>
+<p>Dan hebben we dus precies hetzelfde probleem als bij globale variabelen: het is moeilijk te voorspellen wat ze precies doen.</p>
+<h2 id="oplossing">Oplossing!</h2>
+<p>Om functies voorspelbaar te maken kunnen we iets vrij simpels doen:</p>
+<p>geef de functie alle data mee die die functie nodig heeft om diens werk te kunnen doen</p>
+<p>Als je dit doet:</p>
+<ul>
+<li>is het de lezer van je code (jij in een paar maanden) sneller duidelijk waar de data voor deze functie vandaan komt</li>
+<li>doet je functie altijd precies hetzelfde <em>als</em> de argumenten die je aan die functie geeft hetzelfde zijn</li>
+<li>is je functie veel makkelijker te testen</li>
+</ul>
+<p>Conclusie: je code wordt veel voorspelbaarder.</p>
+
+
+
+</body>
+
+</html>

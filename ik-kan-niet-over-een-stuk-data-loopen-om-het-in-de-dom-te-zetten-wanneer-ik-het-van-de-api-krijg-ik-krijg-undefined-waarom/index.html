@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="ik-kan-niet-over-een-stuk-data-loopen-om-het-in-de-dom-te-zetten-wanneer-ik-het-van-de-api-krijg-ik-krijg-undefined-waarom-werken-met-grote-stukken-data-van-een-api-objects-vs-arrays">Ik kan niet over een stuk data loopen om het in de DOM te zetten wanneer ik het van de API krijg. Ik krijg undefined, waarom? (Werken met grote stukken data van een API - Objects vs Arrays)</h1>
+<p>ook <code>undefined</code>, omdat de array <code>data.genres</code>, geen property <code>name</code> heeft.</p>
+<h2 id="een-voorbeeld">Een voorbeeld:</h2>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">data { 
+ genres: [
+        {id: Blah, name: &#39;Action&#39;}, 
+        {id: Hoi, name: &#39;Science Fiction&#39;}
+       ]
+}
+</span></code></pre>
+<p><strong>data.forEach() 👉 levert <code>undefined</code> op. Waarom?</strong> </p>
+<p><strong>Hoe kom je bij de genres?</strong></p>
+<p>Die kun je dus heel simpel aanspreken: <code>data.genres</code>. </p>
+<p><code>**data.genres</code> is wél een array 🎉.**</p>
+<p>Namelijk: <code>[{id: Blah, name: 'Action'}, {id: Hoi, name: 'Science Fiction'} ]</code>
+Over een array kun je uiteraard wél loopen. </p>
+<p><strong>Nog een begrip vraag: Wat levert <code>data.genres.name</code> op?</strong> </p>
+<p><strong>Wat lever <code>data.genres[0].name</code> op?</strong> </p>
+<p>Antwoord De <code>name</code> van het eerste <code>genre</code>.</p>
+
+
+
+</body>
+
+</html>

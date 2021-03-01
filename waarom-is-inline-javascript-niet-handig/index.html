@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="waarom-is-inline-javascript-niet-handig">Waarom is inline JavaScript niet handig?</h1>
+<p>Je kan je JavaScript code in je HTML file stoppen. Dat doe je met <script>tags. Je kan ook met (bijvoorbeeld) het onclick attribuut event listeners aan je HTML toevoegen.</p>
+<p>Deze manieren van JavaScript aan je pagina toevoegen is niet handig. Waarom niet? De belangrijkste redenen zijn:</p>
+<ol>
+<li>als je meerdere HTML files hebt en je wil dezelfde JavaScript gebruiken moet je je code gaan kopiëren, dat wordt snel onhandig</li>
+<li>als je aan meerdere elementen event listeners wil hangen moet je ook code gaan kopiëren, dat wordt snel onhandig</li>
+<li>als je de JavaScript van je website aan het bekijken bent is het handig om alle JavaScript code bij elkaar te hebben en niet te hoeven switchen van je HTML file terug naar je JavaScript file terug naar je HTML file</li>
+</ol>
+<p>Als laatste: de meeste developers gebruiken geen inline JavaScript, als jij dat wel doet wordt jouw code moeilijker te lezen voor andere developers.</p>
+
+
+
+</body>
+
+</html>

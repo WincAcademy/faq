@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="ik-maak-een-variable-die-ik-maar-een-keer-gebruik-kan-dat-handiger">Ik maak een variable die ik maar één keer gebruik, kan dat handiger?</h1>
+<p>Soms maak je een variabele aan die je maar één keer gebruikt. Daar kan je een goeie reden voor hebben, maar vaak kan je in JavaScript dat dingen in één keer doen.</p>
+<p>Voorbeeld:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// Langer
+const liMenu = document.querySelector(&#39;.colormenu&#39;);
+liMenu.addEventListener(&#39;click&#39;, function() {
+  toggle();
+});
+
+// Korter
+document.querySelector(&#39;.colormenu&#39;).addEventListener(&#39;click&#39;, function() {
+  toggle();
+});
+</span></code></pre>
+
+
+</body>
+
+</html>

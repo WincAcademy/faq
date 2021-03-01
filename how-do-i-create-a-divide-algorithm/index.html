@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="how-do-i-create-a-divide-algorithm">How do I create a 'divide algorithm'?</h1>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">/*
+We&#39;ve got a series of objects. We want to divide or categorize those objects
+into separate &#39;buckets&#39;. We want to do that on the basis of an attribute.
+
+Basically this algorithm that we&#39;re writing has two steps:
+
+1. make a list of buckets
+2. divide the items over the buckets
+
+To be able to do this we need certain functionality:
+
+- read attribute X from an object
+- do we have a bucket for X?
+- get the bucket for X
+- create the bucket for X
+- add an item to a bucket
+
+Some of this functionality is so simple we don&#39;t want to write a function for
+it. For others we do want to write a function.
+
+So let&#39;s implement this so we can divide these animals into their continents.
+*/
+
+const animals = [{
+        name: &#39;monkey&#39;,
+        food: &#39;bananas&#39;,
+        weight: 60,
+        max_age: 30,
+        continent: &#39;Africa&#39;,
+        flies: false,
+        nocturnal: false,
+    },
+    {
+        name: &#39;rhino&#39;,
+        food: &#39;grass&#39;,
+        weight: 800,
+        max_age: 40,
+        continent: &#39;Africa&#39;,
+        flies: false,
+        nocturnal: false,
+    },
+    {
+        name: &#39;bat&#39;,
+        food: &#39;insects&#39;,
+        weight: 1,
+        max_age: 5,
+        continent: &#39;Asia&#39;,
+        flies: true,
+        nocturnal: true,
+    },
+    {
+        name: &#39;tapir&#39;,
+        food: &#39;insects&#39;,
+        weight: 20,
+        max_age: 80,
+        continent: &#39;South-America&#39;,
+        flies: false,
+        nocturnal: true,
+    },
+    {
+        name: &#39;lion&#39;,
+        food: &#39;meat&#39;,
+        weight: 200,
+        max_age: 50,
+        continent: &#39;Africa&#39;,
+        flies: false,
+        nocturnal: true,
+    },
+    {
+        name: &#39;cow&#39;,
+        food: &#39;grass&#39;,
+        weight: 600,
+        max_age: 60,
+        continent: &#39;Europe&#39;,
+        flies: false,
+        nocturnal: false,
+    },
+    {
+        name: &#39;moose&#39;,
+        food: &#39;grass&#39;,
+        weight: 800,
+        max_age: 50,
+        continent: &#39;Europe&#39;,
+        flies: false,
+        nocturnal: false,
+    },
+    {
+        name: &#39;house cat&#39;,
+        food: &#39;meat&#39;,
+        weight: 20,
+        max_age: 15,
+        continent: &#39;Europe&#39;,
+        flies: false,
+        nocturnal: false,
+    },
+];
+
+const bucketForValueExists = (buckets, attributeValue) =&gt;
+    attributeValue in buckets;
+
+const addBucket = (buckets, attributeValue) =&gt; {
+    // Add an empty array under &#39;Africa&#39; so we can add animals to this array
+    // later on
+    buckets[attributeValue] = [];
+    return buckets;
+};
+
+/*
+So now we have the functions that will help us create and add to buckets. Let&#39;s
+start using them.
+*/
+
+// Create buckets
+let buckets = {};
+const attribute = &#39;continent&#39;; // We want to divide based on continent
+animals.forEach(animal =&gt; {
+    const attributeValue = animal[attribute]; // &#39;Africa&#39; for example
+    if (!bucketForValueExists(buckets, attributeValue)) {
+        buckets = addBucket(buckets, attributeValue);
+    }
+});
+
+// Now let&#39;s put the animals into the bucket they belong
+animals.forEach(animal =&gt; {
+    const attributeValue = animal[attribute]; // &#39;Africa&#39; for example
+    buckets[attributeValue].push(animal); // Find the right bucket and add the animal to the array of that bucket
+});
+
+console.log(buckets);
+
+// We could make this a lot more compact and iterate only once, but that makes
+// it harder to read.
+const divided = animals.reduce((buckets, current) =&gt; {
+    const attributeValue = current.continent;
+    if (!(attributeValue in buckets)) buckets[attributeValue] = [];
+    buckets[attributeValue].push(current);
+    return buckets;
+}, {});
+console.log(divided);
+</span></code></pre>
+
+
+</body>
+
+</html>

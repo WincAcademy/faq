@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="wat-is-een-tussentijdse-variabele-en-wat-heb-ik-er-aan">Wat is een tussentijdse variabele en wat heb ik er aan?</h1>
+<p>In code is het mogelijk om heel veel dingen op elkaar te proppen en in elkaar te schuiven. Daar kan je code moeilijk leesbaar van worden. Om dit tegen te gaan is het (soms) handig om gebruik te maken van tijdelijke variabelen. Als je wat beter wordt in programmeren zul je deze 'kruk' wat minder vaak nodig hebben, maar het is goed om het als optie te hebben.</p>
+<p>Een voorbeeld van een te 'in elkaar gedrukte' functie:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const getRandomItem = arr =&gt; arr[Math.floor(Math.random() * arr.length)];
+
+const beatles = [&#39;John&#39;, &#39;Paul&#39;, &#39;George&#39;, &#39;Ringo&#39;, &#39;Kanye&#39;];
+console.log(getRandomItem(beatles));
+</span></code></pre>
+<p>Hieronder dezelfde code maar dan met een tijdelijke variabele er tussen waardoor de code wat makkelijker leesbaar wordt:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const getRandomItem = arr =&gt; {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+};
+
+const beatles = [&#39;John&#39;, &#39;Paul&#39;, &#39;George&#39;, &#39;Ringo&#39;, &#39;Kanye&#39;];
+console.log(getRandomItem(beatles));
+</span></code></pre>
+
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="gebruik-ik-template-literals-of-javascript-om-html-elementen-te-maken">Gebruik ik template literals of JavaScript om HTML elementen te maken?</h1>
+<p>Als je in JavaScript nieuwe HTML elementen wil maken om ze aan de DOM toe te voegen kan dat op verschillende manieren:</p>
+<ol>
+<li>template literals</li>
+<li>document.createElement</li>
+</ol>
+<p>Het is weer een stukje legacy van JavaScript en heeft te maken met de <strong>backwards compatibility.</strong> </p>
+<p>Template literals zijn een nieuwe frisse manier om complexe html element in JS snel te kunnen schrijven. In plaats van regel voor regel net JavaScript “document.createElement”, etc, etc, etc. Want dat voelt een beetje als overbodig en veel handmatig werk</p>
+<p>Beide manieren zijn dus goed:
+D<strong>e JavaScript manier</strong> is de 'oude' en 'robuuste' way-of-working. 
+<strong>Template literals</strong> zijn de 'snelle' en 'nieuwe' manier. </p>
+<p><strong>Welke moet ik dan gebruiken?</strong>
+Het antwoord is: it depends. 
+Voor beide methodes is wat te zeggen, maar wij raden template literals aan (tenzij je IE11 of ouder moet ondersteunen).
+Waarom? Het leest wat lekkerder en het is minder code, en minder code = minder bugs.</p>
+<blockquote>
+<p>Lees hier een gehele blog van Wes Bos over waarom template literals fijn zijn: <a href="https://wesbos.com/template-strings-html">https://wesbos.com/template-strings-html</a></p>
+</blockquote>
+<p>Template literals/strings kun je (nog) niet gebruiken in IE11 <a href="https://caniuse.com/#feat=template-literals">https://caniuse.com/#feat=template-literals</a>. </p>
+<p><strong>Zie ook</strong>: <a href="https://medium.com/@tforward/get-html-to-the-dom-fast-with-js-template-literals-insertadjacenthtml-24b8aa4e8807">https://medium.com/@tforward/get-html-to-the-dom-fast-with-js-template-literals-insertadjacenthtml-24b8aa4e8807</a></p>
+<p>Hieronder een voorbeeld om dit element te maken en vast te maken aan de ul.</p>
+<pre style="background-color:#2b303b;">
+<code class="language-html" data-lang="html"><span style="color:#c0c5ce;">&lt;</span><span style="color:#bf616a;">li </span><span style="color:#d08770;">class</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">status</span><span style="color:#c0c5ce;">&#39;&gt; 
+  &lt;</span><span style="color:#bf616a;">p</span><span style="color:#c0c5ce;">&gt;Mijn Nieuwe Taak&lt;/</span><span style="color:#bf616a;">p</span><span style="color:#c0c5ce;">&gt;
+  &lt;</span><span style="color:#bf616a;">img </span><span style="color:#d08770;">src</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">trash-delete-icon.jpg</span><span style="color:#c0c5ce;">&#39; </span><span style="color:#d08770;">alt</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">delete icon</span><span style="color:#c0c5ce;">&#39;/&gt;
+&lt;/</span><span style="color:#bf616a;">li</span><span style="color:#c0c5ce;">&gt;
+</span></code></pre><pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const list = document.querySelector(&#39;#list&#39;)
+let newLi = document.createElement(&#39;li&#39;)
+newLi.setAttribute(&#39;class&#39;, status)
+let newImg = document.createElement(&#39;img&#39;)    
+newImg.setAttribute(&#39;alt&#39;, &#39;delete icon&#39;);
+newImg.setAttribute(&#39;src&#39;, &#39;trash-delete-icon.jpg&#39;);
+let newText = document.createElement(&#39;p&#39;)
+newText.innerHTML = task;
+newLi.appendChild(newText);
+newLi.appendChild(newImg);
+list.appendChild(newLi).
+</span></code></pre>
+<p><strong>Alternatief met template literals:</strong></p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const list = document.querySelector(&#39;#list&#39;);
+const listItemRaw = `
+  &lt;li class=&#39;status&#39;&gt;
+    &lt;p&gt;${task}&lt;/p&gt;
+    &lt;img src=&#39;trash-delete-icon.jpg&#39; alt=&#39;delete icon&#39;/&gt;
+  &lt;/li&gt;
+`;
+list.insertAdjacentHTML(&#39;beforeend&#39;, listItemRaw);
+</span></code></pre>
+
+
+</body>
+
+</html>

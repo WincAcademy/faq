@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="wat-is-het-verschil-tussen-foreach-en-map">Wat is het verschil tussen .forEach() en .map()?</h1>
+<h2 id="het-korte-antwoord">Het korte antwoord</h2>
+<ul>
+<li>wil je een nieuw array maken? ➡️ <code>array.map()</code></li>
+<li>wil je loopen zonder een nieuw array te maken? ➡️ <code>array.forEach()</code></li>
+</ul>
+<h2 id="het-lange-antwoord">Het lange antwoord</h2>
+<p><code>array.forEach()</code> gebruik je vooral als vervanging van de standaard 'loopjes' dus de for loop en de while loop.  In de <code>array.forEach()</code> loop geef je dan een stukje code mee die voor elk item in de array wordt uitgevoerd. Nadat dit stukje code voor elk item uit de array is uitgevoerd, zal de <code>array.forEach()</code> functie altijd <code>undefined</code> teruggeven als return value. Dit komt omdat er niks wordt 'teruggegeven', er wordt alleen iets 'uitgevoerd'.</p>
+<p>Voorbeeld:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const myArray = [1, 2, 3];
+
+myArray.forEach(arrayItem =&gt; {
+	console.log(&#39;Hallo, de waarde van de huidige loop is&#39;, arrayItem);
+})
+
+// Verwachtte uitkomst:
+// &#39;Hallo, de waarde van de huidige loop is 1&#39;
+// &#39;Hallo, de waarde van de huidige loop is 2&#39;
+// &#39;Hallo, de waarde van de huidige loop is 3&#39;
+// Return value: undefined
+</span></code></pre>
+<p><code>array.map()</code> gebruik je als je een nieuwe array wilt creëren op basis van een bestaande array. Deze heeft wel altijd een return value: namelijk de nieuwe array.</p>
+<p>Voorbeeld:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const myArray = [1, 2, 3];
+
+const doubleValueArray = myArray.map(arrayItem =&gt; arrayItem * 2);
+
+console.log(doubleValueArray);
+
+// Verwachte uitkomst:
+// [2, 4, 6]
+</span></code></pre>
+<p>Het heeft dus weinig zin om een nieuwe variabele te assignen aan een forEach loop, zoals op deze manier:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const doubleValueArray = array =&gt; array.forEach(element =&gt; {
+    console.log(element *2);
+});
+
+console.log(doubleArrayValues([1, 2, 3]));
+// undefined
+</span></code></pre>
+<p>Omdat de <code>forEach()</code> loop uit zichzelf geen nieuwe array returned, krijg je hier als return value <code>undefined</code>. Je schrijft hier namelijk een functie genaamd <code>doubleValueArray</code> die eigenlijk precies hetzelfde doet als wat de <code>array.forEach()</code> functie doet. Dat is dus overbodig.</p>
+<p>Wel is het goed om in gedachten te houden dat je met de <code>array.orEach()</code> functie alles kan doen wat je met een <code>.map()</code> functie doet, maar dan zou je er veel meer code omheen moeten schrijven. </p>
+<p>Check voor een nog uitgebreider antwoord de volgende link: <a href="https://stackoverflow.com/questions/34426458/javascript-difference-between-foreach-and-map#34426481">https://stackoverflow.com/questions/34426458/javascript-difference-between-foreach-and-map#34426481</a></p>
+
+
+
+</body>
+
+</html>

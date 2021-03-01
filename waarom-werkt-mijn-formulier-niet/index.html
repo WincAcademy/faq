@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="netlify-mijn-formulier-werkt-niet-help">Netlify: mijn formulier werkt niet help?</h1>
+<p>Kan aan meerdere dingen liggen. Hier een checklist:</p>
+<ul>
+<li>
+<p>Staat het attribute <code>data-netlify='true'</code> in je form? Ook geen typo?</p>
+</li>
+<li>
+<p>Heb je de homepage van Netlify al gerefresht nadat je een submission hebt gemaakt? Links onderin verschijnen je form submission zoals op het onderstaande screenshot.</p>
+</li>
+<li>
+<p>Zijn de rest van je <strong>form attributes</strong> correct zoals beschreven in de <strong>documentatie van Netlify</strong>?</p>
+<p><code>&lt;form name='contact' method='POST' data-netlify='true'&gt;</code> </p>
+</li>
+<li>
+<p>Heeft je form een button van het type 'submit'? Want anders weet het formulier niet hoe het verzonden moet worden 
+<code>&lt;button type='submit'&gt;Send&lt;/button&gt;</code></p>
+</li>
+<li>
+<p>Je HTML moet helemaal kloppen: als er foutjes in je HTML zitten kan Netlify je formulier bijvoorbeeld niet accepteren. Check je HTML met de strengste linter: <a href="https://validator.w3.org/#validate_by_input">https://validator.w3.org/#validate_by_input</a> en fix de fouten die daaruit komen.</p>
+</li>
+</ul>
+<p>Screenshot Netlify form submissions, met link onderin de recent form submissions:</p>
+<p><img src="@/netlify-form.png" alt="netlify-form.png" /></p>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="ik-wil-gebruik-maken-van-moderne-javascript-features-maar-deze-worden-nog-niet-in-alle-browsers-ondersteunt-hoe-los-ik-dit-op">Ik wil gebruik maken van moderne JavaScript features, maar deze worden nog niet in alle browsers ondersteunt. Hoe los ik dit op?</h1>
+<p>Polyfills</p>
+<p>JavaScript, en de specificatie waar het aan voldoet (ECMAScript) veranderen voortdurend, en ontvangen dan ook wel eens nieuwe features. Deze features moeten door de ontwikkelaars van browsers ondersteund worden, en dit kan soms wel eens lang duren, of het gebeurt überhaupt niet.</p>
+<p>Het kan dus voorkomen dat jij als programmeur een feature van de laatste versie van JavaScript wil gebruiken in jouw code, maar dat deze feature (nog niet) ondersteund wordt door (alle) browsers waarop jij wil dat jouw code kan draaien. In dit geval zal je een stukje code moeten schrijven/gebruiken die de ondersteuning als het ware handmatig toevoegd. Zo'n stukje code heet een <code>polyfill</code>.</p>
+<h2 id="wanneer-is-dit-nodig">Wanneer is dit nodig?</h2>
+<p>Om erachter te komen of je een polyfill nodig hebt voor het gebruik van een bepaalde feature kun je beslissen welke browsers (of versies van de browsers) je wilt ondersteunen.
+Als jij werkt aan een website waar miljoenen mensen dagelijks afhankelijk van zijn is het misschien nog nodig om Internet Explorer van 2000 te ondersteunen, en zal een polyfill dus misschien nodig zijn. Als je echter bijvoorbeeld een website maakt voor jezelf en een aantal vrienden is het waarschijnlijk acceptabel om alleen de meest recente versies van je favoriete browser te ondersteunen, en dus zal een polyfill waarschijnlijk niet nodig zijn.</p>
+<p>Om te zien welke browserversies welke features ondersteunen kun je kijken op websites als <a href="https://www.caniuse.com">caniuse.com</a>. Hier kun je bijvoorbeeld zoeken naar <code>Array.prototype.map</code> om te zien welke browsers de ingebouwde array-method <code>map</code> ondersteunen.</p>
+<h2 id="hoe-maak-gebruik-ik-een-polyfill">Hoe maak/gebruik ik een polyfill?</h2>
+<p>Vaak zal de code van een polyfill al geschreven zijn door iemand anders. Deze code kun je dan opzoeken en toevoegen aan jouw code. Zorg er hierbij voor dat je deze code uitvoert voordat je gebruik maakt van de feature.</p>
+<p>Om bijvoorbeeld <code>Array.prototype.map</code> te polyfill-en kun je naar <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">de MDN-pagina van map</a> gaan. Hier staat een <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Polyfill">kopje polyfill</a>, waar code te vinden is die je kunt gebruiken.</p>
+<p>Als je een polyfill voor een bepaalde feature niet kan vinden op de desbetreffence MDN-pagina kun je ernaar googlen om te proberen dit ergens anders vandaan te halen. Als er online echt geen code te vinden is voor ene polyfill zul je deze code zelf moeten schrijven.</p>
+<h2 id="meer-informatie">Meer informatie</h2>
+<p>Voor meer informatie, zie o.a. de volgende links:
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/Polyfill">https://developer.mozilla.org/en-US/docs/Glossary/Polyfill</a></p>
+<p><a href="https://javascript.info/polyfills">https://javascript.info/polyfills</a></p>
+<p><a href="https://www.google.com/search?q=polyfill">https://www.google.com/search?q=polyfill</a></p>
+
+
+
+</body>
+
+</html>

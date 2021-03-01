@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="hoe-gebruik-ik-meerdere-javascript-files">Hoe gebruik ik meerdere JavaScript files?</h1>
+<p>Als je wat meer code gaat schrijven kan het handig en verstandig zijn om je code op te splitsen in meerdere files.</p>
+<p>Dat kan op meerdere manieren. Kies wel altijd maar één manier :-)</p>
+<h2 id="in-een-html-pagina">In een HTML pagina</h2>
+<p>Als je een HTML pagina hebt dan is de simpelste manier om meerdere JavaScript files in te laden de volgende. In de <code>&lt;head&gt;</code>van je pagina zet je twee <code>&lt;script&gt;</code> tags, zoals hieronder:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-html" data-lang="html"><span style="color:#c0c5ce;">&lt;</span><span style="color:#bf616a;">script </span><span style="color:#d08770;">defer src</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">script1.js</span><span style="color:#c0c5ce;">&#39;&gt;&lt;/</span><span style="color:#bf616a;">script</span><span style="color:#c0c5ce;">&gt;
+&lt;</span><span style="color:#bf616a;">script </span><span style="color:#d08770;">defer src</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">script2.js</span><span style="color:#c0c5ce;">&#39;&gt;&lt;/</span><span style="color:#bf616a;">script</span><span style="color:#c0c5ce;">&gt;
+</span></code></pre>
+<p>Let op de volgorde, als je in <code>script2.js</code> iets wil gebruiken dat in <code>script1.js</code> staat moet je ze ook in die volgorde in je HTML zetten.</p>
+<h2 id="in-een-node-js-script">In een Node.js script</h2>
+<p>In een Node.js script, zonder website of HTML in de buurt, kun je geen HTML tags gebruiken.</p>
+<p>We draaien altijd één script met Node, laten we die <code>main.js</code> noemen. Dus dat wordt:</p>
+<p><code>$ node main.js</code></p>
+<p>Maar als we nou een andere JavaScript file hebben waarvan we willen dat <code>main.js</code> daar gebruik van kan maken dan moeten we twee stappen nemen:</p>
+<ol>
+<li>de file die we willen inladen moet iets 'exporten', zie onder</li>
+<li>de file die een andere file wil inladen moet 'requiren'</li>
+</ol>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// vegetables.js
+const vegetables = [&#39;peas&#39;, &#39;corn&#39;, &#39;potatoes&#39;];
+
+module.exports = {vegetables};
+</span></code></pre><pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// main.js
+const vegetablesModule = require(&#39;./vegetables.js&#39;);
+const vegetables = vegetablesModule.vegetables;
+
+console.log(&#39;De eerste groente is:&#39;);
+console.log(vegetables[0]);
+</span></code></pre><h2 id="in-een-react-applicatie">In een React applicatie</h2>
+<p>In een React applicatie volg je het patroon dat je ziet als je <code>create-react-app</code> draait.</p>
+
+
+
+</body>
+
+</html>

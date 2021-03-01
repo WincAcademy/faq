@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="wanneer-is-het-wel-of-niet-handig-om-een-regular-expression-te-gebruiken">Wanneer is het wel of niet handig om een regular expression te gebruiken?</h1>
+<p>Regular expressions (regex) zijn hele krachtige tools. Je kan er heel veel mee. Maar omdat ze ook vrij complex zijn hebben ze ook een risico: je <em>denkt</em> dat je regex werkt maar je mist een paar 'edge cases'. Een edge case is een situatie waar je niet aan hebt gedacht waar je regex ook op moet werken.</p>
+<p>De vuistregel is eigenlijk:</p>
+<blockquote>
+<p>Gebruik de simpelste tool voor het klusje.</p>
+</blockquote>
+<p>Voorbeelden:</p>
+<p>Als je wil weten of een string met 'abc' begint kun je dat doen met regex. Maar je hebt ook in JavaScript de <code>String.startsWith</code> methode. Die is veel simpeler.</p>
+<p>Als je wil weten of een string uppercase of lowercase karakters bevat kun je dit doen:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const name = &#39;Winc Academy&#39;;
+const hasUpperCase = str =&gt; str.toLowerCase !== str;
+const hasLowerCase = str =&gt; str.toUpperCase !== str;
+</span></code></pre>
+<p>Maar als je taak complexer wordt dan kan een regex wel het goede antwoord zijn.</p>
+
+
+
+</body>
+
+</html>

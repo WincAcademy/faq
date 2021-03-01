@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="waarom-zou-je-string-interpolation-template-literals-gebruiken">waarom zou je string interpolation (template literals) gebruiken?</h1>
+<p>Dit is string interpolation: </p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let title = &#39;Mrs.&#39;;
+let name = &#39;Doubtfire&#39;;
+let greeting = `Dear ${title} ${name}`; // &#39;Dear Mrs. Doubtfire&#39;
+</span></code></pre>
+<p>Als je strings en variabelen wil combineren tot één lange string kan dat het beste met 'string interpolation'.</p>
+<p>Deze manier van strings en variabelen combineren is meestal leesbaarder en makkelijker onderhoudbaar dan bijv string concatenatie.</p>
+<p>Meer info:
+<a href="https://campushippo.com/lessons/how-to-do-string-interpolation-with-javascript-7854ef9d">https://campushippo.com/lessons/how-to-do-string-interpolation-with-javascript-7854ef9d</a></p>
+<p>Hoe ze te gebruiken? →
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals</a></p>
+<p>⚠️ Let op: als je maar één string hebt kun je gewoon die string gebruiken dan hoef je niet te interpoleren:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let name = &#39;Fresh Prince&#39;;
+console.log(`${name}`); // &#39;Fresh Prince&#39; (overbodig gebruik van interpolatie)
+console.log(name); // &#39;Fresh Prince&#39;
+</span></code></pre>
+
+
+</body>
+
+</html>

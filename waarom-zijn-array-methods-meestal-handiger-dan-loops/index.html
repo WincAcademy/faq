@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="waarom-zijn-array-methods-meestal-handiger-dan-loops">Waarom zijn array methods meestal handiger dan loops?</h1>
+<p>Je kan met array methods en met for loops precies dezelfde dingen gedaan krijgen.</p>
+<p>Maar behalve iets 'gedaan krijgen' is het ook belangrijk dat je code goed leesbaar is, dat jij of iemand anders die naar je code kijkt snel(ler) ziet wat er aan de hand is. Makkelijk leesbare code heeft ook minder snel bugs erin.</p>
+<p>Het gebruiken van array methods in plaats van loops is een goede manier om je code makkelijker leesbaar te krijgen. Door gebruik te maken van bepaalde array methods hoef je niet zelf de code te schrijven om </p>
+<ol>
+<li>iets uit een array te halen</li>
+<li>een nieuw array aan te maken</li>
+<li>een array te updaten</li>
+<li>te checken of je aan het einde van een array bent</li>
+</ol>
+<p>En in al die dingen kun je (en <em>zul</em> je fouten maken).</p>
+<p>Voorbeeld:</p>
+<ul>
+<li>we hebben een array</li>
+<li>we willen alleen de even nummers overhouden</li>
+<li>daar willen we het kwadraat van</li>
+<li>en dat nieuwe array dan console.loggen</li>
+</ul>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+const newArray = [];
+for (let i = 0; i &lt; arr.length; i++) {
+  if (arr[i] % 2 === 0) {
+    newArray.push(arr[i] * arr[i]);
+  }
+}
+console.log(newArray);
+</span></code></pre>
+<p>Als de berekeningen die je doet in een aparte functie staan dan ziet het er met for loops zo uit:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+const isEven = number =&gt; number % 2 === 0;
+const calculateSquare = number =&gt; number * number;
+
+const newArray = [];
+for (let i = 0; i &lt; arr.length; i++) {
+  if (isEven(arr[i])) {
+    newArray.push(calculateSquare(arr[i]));
+  }
+}
+console.log(newArray)
+</span></code></pre>
+<p>Met array methods ziet het er al meteen wat 'schoner' uit:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+const evenNumbers = arr.filter(number =&gt; number % 2 === 0);
+const squares = evenNumbers.map(number =&gt; number * number);
+console.log(squares);
+</span></code></pre>
+<p>Je kan de array methods ook wat compacter opschrijven:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(arr.filter(n =&gt; n % 2 === 0).map(n =&gt; n * n));
+</span></code></pre>
+<p>Als de berekeningen die je doet in een aparte functie staan ziet de code met array methods er nog 'cleaner uit':</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+const isEven = number =&gt; number % 2 === 0;
+const calculateSquare = number =&gt; number * number;
+console.log(arr.filter(isEven).map(calculateSquare));
+</span></code></pre>
+<p>Bij deze laatste variant is het makkelijk om de kleine 'utility functions' die je hebt gemaakt ergens anders weer opnieuw te gebruiken.</p>
+
+
+
+</body>
+
+</html>

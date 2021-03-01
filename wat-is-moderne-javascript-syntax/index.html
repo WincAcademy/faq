@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="wat-is-moderne-javascript-syntax">Wat is moderne JavaScript syntax?</h1>
+<p>JavaScript is een taal die al een tijdje bestaat. In de afgelopen 10 jaar zijn er een aantal toevoegingen aan de taal gedaan die het mogelijk maken om je code beter te maken, minder foutgevoelig of simpelweg korter. Hieronder een kort overzichtje van wat je beter wel en niet kan doen.</p>
+<h3 id="variabelen-aanmaken">Variabelen aanmaken</h3>
+<p>Oud:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">var a = 1;
+</span></code></pre>
+<p>Nieuw:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const a = 1;
+// of als de waarde moet kunnen veranderen: let
+let b = 2;
+</span></code></pre><h3 id="functies">Functies</h3>
+<p>Oud:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">function foo () {
+  return 4;
+}
+</span></code></pre>
+<p>Nieuw:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const foo = () =&gt; 4;
+</span></code></pre><h3 id="strings-aan-elkaar-plakken">Strings aan elkaar plakken</h3>
+<p>Oud:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">&#39;Hello &#39; + name;
+</span></code></pre>
+<p>Nieuw:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">`Hello ${name}`
+</span></code></pre><h3 id="loops">Loops</h3>
+<p>Oud:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const qux = [1,2,3,4];
+for (var i = 0; i &lt; qux.length; i++){
+  console.log(qux[i]);
+}
+</span></code></pre>
+<p>Nieuw:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const qux = [1,2,3,4];
+qux.forEach(console.log);
+</span></code></pre>
+<p>Als je loops gebruikt om een nieuw array te maken: gebruik <code>array.map</code>.</p>
+<p>Als je loops gebruikt om elementen te filteren: gebruik <code>array.filter</code>.</p>
+<h3 id="waardes-uit-een-object-pakken-destructuring">Waardes uit een object pakken (destructuring)</h3>
+<p>Voorbeeld gekopieerd van <a href="https://programmingwithmosh.com/javascript/essential-modern-javascript-features/">Mosh</a>.</p>
+<p>Oud:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const person = { 
+   name: &#39;Mosh&#39;, 
+   address: {
+      billing: { 
+         street: &#39;123 Flinders st&#39;,
+         city: &#39;Melbourne&#39;,
+         state: &#39;Victoria&#39;
+      }
+   }
+};
+const street = person.address.billing.street;
+const city = person.address.billing.city;
+const state = person.address.billing.state;
+</span></code></pre>
+<p>Nieuw:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const person = { 
+   name: &#39;Mosh&#39;, 
+   address: {
+      billing: { 
+         street: &#39;123 Flinders st&#39;,
+         city: &#39;Melbourne&#39;,
+         state: &#39;Victoria&#39;
+      }
+   }
+};
+const { street, city, state } = person.address.billing;
+</span></code></pre>
+
+
+</body>
+
+</html>

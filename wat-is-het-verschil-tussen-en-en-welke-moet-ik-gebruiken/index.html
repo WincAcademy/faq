@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="wat-is-het-verschil-tussen-en-en-welke-moet-ik-gebruiken">Wat is het verschil tussen === en == en welke moet ik gebruiken?</h1>
+<p>Als je in JavaScript wil wetenof dingen hetzelfde zijn kun je dat doen met de zgn 'equality operators':</p>
+<ul>
+<li><code>==</code> (ongeveer gelijk aan elkaar)</li>
+<li><code>!=</code> (ongeveer niet gelijk aan elkaar)</li>
+<li><code>===</code> (écht gelijk aan elkaar)</li>
+<li><code>!==</code> (écht niet gelijk aan elkaar)</li>
+</ul>
+<p>De laatste 2 noemen we de 'strict equality operators'.</p>
+<p>Die eerste 2 zijn niet handig om te gebruiken. En wel om de volgende redenen.</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">0 == False; // true
+&#39;&#39; == False; // true
+</span></code></pre>
+<p>Je kan dus met <code>==</code> en <code>!=</code> er eigenlijk niet goed op rekenen dat dingen echt gelijk of ongelijk aan elkaar zijn. Voor een visueel overzicht van hoe 'rommelig' en inconsistent de non-strict equality operators zijn: </p>
+<p><a href="https://dorey.github.io/JavaScript-Equality-Table/">JS Comparison Table</a></p>
+<p>In de 2e tab van die pagina zie je ook hoe simpel en consistent het gebruik van de strict equality operator is.</p>
+<p>Dus:</p>
+<h3 id="gebruik-altijd-en">Gebruik ALTIJD <code>===</code> en <code>!==</code></h3>
+<p>Meer informatie:</p>
+<p><a href="https://javascript.info/comparison#strict-equality">Comparisons</a></p>
+<p><a href="https://2ality.com/2011/12/strict-equality-exemptions.html">When is it OK to use == in JavaScript?</a></p>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="git-in-vscode-zegt-dat-ik-5000-files-track-wat-is-er-aan-de-hand">Git in VSCode zegt dat ik 5000+ files track, wat is er aan de hand?!?</h1>
+<p>Git kan heel veel files aan.</p>
+<p>Git in VSCode kan minder files aan, omdat VSCode ze allemaal moet laten zien, dus als er ineens heel veel files in je repository staan dan gaat Git in VSCode klagen.</p>
+<p>Oplossing:</p>
+<ol>
+<li>ga met je terminal naar je repository (op je harde schijf)</li>
+<li>doe een <code>git status</code></li>
+<li>je krijgt nu een lijst van alle files te zien waar git verandering in ziet</li>
+<li>waarschijnlijk staan hier heel veel files in die je <strong>niet</strong> in je repository wil</li>
+<li>de reden hiervoor is waarschijnlijk dat je <code>git init</code> hebt gedaan op de verkeerde plek (namelijk ergens 'hogerop' in je computer, in <code>Documents</code> bijvoorbeeld. Git weet niet of dat een goeie plek is of niet en zal dus (bijvoorbeeld) van je hele <code>Documents</code> map, met duizenden files, een repository proberen te maken</li>
+<li>we gaan nu uitzoeken wat de 'root' van de repository is</li>
+<li>ga een map omhoog (met <code>cd ..</code>)</li>
+<li>doe weer <code>git status</code></li>
+<li>krijg je nu een antwoord van git? ja → dan zit je nog steeds in de repository, ga naar stap 7</li>
+<li>krijg je geen antwoord van git, dan is de laatste map van stap 7 de map waar je git repository in zit</li>
+<li>we gaan nu je git repository verwijderen, <strong>maar niet je files</strong></li>
+<li>je git repository is een directory die <code>.git</code> heet, die directory (en <strong>alleen</strong> die directory!) kun je deleten</li>
+<li>zie je de <code>.git</code> directory niet? <a href="https://www.notion.so/Hoe-kan-ik-verborgen-files-dotfiles-zien-07188638fb6145e2b188ed78e3f10ee0">kijk hier hoe je dit soort verborgen files wel kan zien</a></li>
+<li>laatste stap: maak je git repository nu op de <em>goeie</em> plek met <code>git init</code></li>
+</ol>
+
+
+
+</body>
+
+</html>

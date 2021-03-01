@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="netlify-een-plaatje-op-mijn-pagina-werkt-op-mijn-computer-wel-maar-op-netlify-niet">Netlify: Een plaatje op mijn pagina werkt op mijn computer wel maar op Netlify niet</h1>
+<p>Grote kans dat dit komt door het volgende:</p>
+<p>Als je in je HTML verwijst naar een plaatje (met de <img> tag) geef je het 'pad' naar dat plaatje op. </p>
+<p>Als het plaatje in dezelfde directory staat dan kun je de naam van het bestand opgeven: <img src='plaatje.jpg'/></p>
+<p>Als het plaatje in een subdirectory staat dan moet je een pad opgeven: <img src='images/plaatje.jpg'/></p>
+<p>Als het pad in je HTML verwijst naar een directory die alleen op je computer aanwezig is dan werkt dit wél op je computer maar niet ergens anders (zoals bijvoorbeeld op Netlify): <img src='C:\Documenten\Projecten\Winc\Opdracht3\images\plaatje.jpg'/>
+Want Netlify 'weet' niet waar dit is: C:\Documenten\Projecten\Winc\Opdracht3\images\plaatje.jpg</p>
+
+
+
+</body>
+
+</html>

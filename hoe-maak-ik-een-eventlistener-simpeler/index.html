@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="hoe-maak-ik-een-eventlistener-simpeler">Hoe maak ik een eventListener simpeler?</h1>
+<p>Als je zo een event listener aan een element toevoegt:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">document.getElementById(&#39;nieuwste&#39;).addEventListener(&#39;change&#39;, function () {
+    filterLatestMovies()
+});
+</span></code></pre>
+<p>Dan doet de functie die je geeft aan <code>addEventListener</code> niet zoveel, het is dan een doorgeefluik.</p>
+<p>Schrijf in plaats daarvan dan dit:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">document.getElementById(&#39;nieuwste&#39;).addEventListener(&#39;change&#39;, filterLatestMovies);
+</span></code></pre>
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="mijn-media-query-lijkt-niet-goed-te-werken-op-een-telefoon-of-met-mobile-mode-in-de-devtools-waarom-niet">Mijn media query lijkt niet goed te werken op een telefoon of met mobile mode in de devtools, waarom niet?</h1>
+<p>In de basis zijn media queries die reageren op de breedte van je scherm in pixels relatief simpel:</p>
+<ul>
+<li>is het scherm breder dan X? ➡️ laad dan (ook) deze CSS</li>
+<li>is het scherm breder dan Y? ➡️ laad dan (ook) deze CSS</li>
+</ul>
+<p>Maar je zal misschien gemerkt hebben dat de realiteit iets complexer is. De reden hiervoor is de volgende:</p>
+<p>Er zijn nog steeds websites die van zichzelf <em>niet</em> handig zijn op een klein scherm. Als je die op een smal scherm zou laden dan zou het een super-onhandige site zijn. De browsers op telefoons hebben daarom een bepaalde standaard instelling: ze weten dat het scherm van je telefoon (bijvoorbeeld) 500px breed is, maar ze vertellen de website 'ik ben 1000px breed'. Zo kan een site die 1000px breed is toch getoond worden op een scherm van 500px, ze zoomen dan een stuk uit. </p>
+<p>Deze standaard instelling is voor de maker van een website die juist mooie mediaqueries geschreven heeft natuurlijk flink onhandig. Maar daar kun je wat aan doen: voeg deze HTML toe aan de <head> van je pagina:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-html" data-lang="html"><span style="color:#c0c5ce;">&lt;</span><span style="color:#bf616a;">meta </span><span style="color:#d08770;">name</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">viewport</span><span style="color:#c0c5ce;">&#39; </span><span style="color:#d08770;">content</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">width=device-width, initial-scale=1</span><span style="color:#c0c5ce;">&#39;&gt;
+</span></code></pre>
+<p>Hoe dit precies werkt is een lang en wat technisch verhaal. Daar mag je in duiken, maar raak niet de weg kwijt :-) </p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a></p>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="waarom-is-foo-true-niet-handig-booleans-comparen">Waarom is <code>foo == True</code> niet handig? (booleans comparen)</h1>
+<h2 id="python">Python</h2>
+<p>Het is mogelijk om dit soort code te schrijven:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-python" data-lang="python"><span style="color:#65737e;"># 🔴
+</span><span style="color:#c0c5ce;">foo = </span><span style="color:#d08770;">True
+</span><span style="color:#c0c5ce;">bar = </span><span style="color:#d08770;">False
+
+</span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">foo == </span><span style="color:#d08770;">True</span><span style="color:#c0c5ce;">:
+    </span><span style="color:#96b5b4;">print</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == True</span><span style="color:#c0c5ce;">&#39;)
+</span><span style="color:#b48ead;">else
+    </span><span style="color:#96b5b4;">print</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == False</span><span style="color:#c0c5ce;">&#39;) 
+
+</span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">foo == </span><span style="color:#d08770;">True </span><span style="color:#c0c5ce;">and bar == </span><span style="color:#d08770;">False</span><span style="color:#c0c5ce;">:
+    </span><span style="color:#96b5b4;">print</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == True en bar == False</span><span style="color:#c0c5ce;">&#39;)
+</span><span style="color:#b48ead;">else
+    </span><span style="color:#96b5b4;">print</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == False OF bar == True</span><span style="color:#c0c5ce;">&#39;)
+</span></code></pre>
+<p>Maar dan ben je eigenlijk overbodig aan het comparen. Omdat <code>foo</code> en <code>bar</code> zelf al booleans zijn kun je ze ook direct gebruiken in statements die een boolean verwachten (zoals het <code>if</code> statement). Beter is dus:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-python" data-lang="python"><span style="color:#65737e;"># ✅
+</span><span style="color:#c0c5ce;">foo = </span><span style="color:#d08770;">True
+</span><span style="color:#c0c5ce;">bar = </span><span style="color:#d08770;">False
+
+</span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">foo:
+    </span><span style="color:#96b5b4;">print</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == True</span><span style="color:#c0c5ce;">&#39;)
+</span><span style="color:#b48ead;">else
+    </span><span style="color:#96b5b4;">print</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == False</span><span style="color:#c0c5ce;">&#39;) 
+
+</span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">foo and not bar:
+    </span><span style="color:#96b5b4;">print</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == True en bar == False</span><span style="color:#c0c5ce;">&#39;)
+</span><span style="color:#b48ead;">else
+    </span><span style="color:#96b5b4;">print</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == False OF bar == True</span><span style="color:#c0c5ce;">&#39;)
+</span></code></pre><h2 id="javascript">JavaScript</h2>
+<p>In JavaScript geldt hetzelfde:</p>
+<p>Omslachtig:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// 🛑
+const foo = true;
+const bar = false;
+
+if (foo === true) {
+  console.log(&#39;foo == true&#39;);
+} else {
+  console.log(&#39;foo == false&#39;);
+}
+
+if (foo === true &amp;&amp; bar !== false) {
+  console.log(&#39;foo == true en bar == false&#39;);
+} else {
+  console.log(&#39;foo == false OF bar == true&#39;);
+}
+</span></code></pre>
+<p>Beter:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// ✅
+const foo = true;
+const bar = false;
+
+if (foo) {
+  console.log(&#39;foo == true&#39;);
+} else {
+  console.log(&#39;foo == false&#39;);
+}
+
+if (foo &amp;&amp; !bar) {
+  console.log(&#39;foo == true en bar == false&#39;);
+} else {
+  console.log(&#39;foo == false OF bar == true&#39;);
+}
+</span></code></pre>
+
+
+</body>
+
+</html>

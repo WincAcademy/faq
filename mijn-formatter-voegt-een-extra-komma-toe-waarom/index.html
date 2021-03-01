@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="mijn-formatter-voegt-een-extra-komma-toe-waarom">Mijn formatter voegt een extra komma toe, waarom?</h1>
+<p>Als je een formatter gebruikt voor je code kan het zijn dat deze soms een extra komma aan het einde van bepaalde regels zet. Voorbeeld (in Python)</p>
+<pre style="background-color:#2b303b;">
+<code class="language-python" data-lang="python"><span style="color:#c0c5ce;">foo = [
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">wereld</span><span style="color:#c0c5ce;">&#39;, </span><span style="color:#65737e;"># 👈
+</span><span style="color:#c0c5ce;">]
+</span></code></pre>
+<p>Zelfde voorbeeld in JavaScript:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-python" data-lang="python"><span style="color:#c0c5ce;">const foo = [
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+    &#39;</span><span style="color:#a3be8c;">hallo</span><span style="color:#c0c5ce;">&#39;,
+];
+</span></code></pre>
+<p>Die komma is technisch niet nodig, en mag wel. Het toevoegen van die komma heeft een paar voordelen:</p>
+<ul>
+<li>je kan de items in deze list makkelijker veranderen van volgorde</li>
+<li>je diffs worden cleaner</li>
+<li>als je een nieuw item toevoegt aan je list kan je de komma niet vergeten (want hij staat er al)</li>
+</ul>
+<p>Lees meer:</p>
+<p><a href="https://medium.com/@nikgraf/why-you-should-enforce-dangling-commas-for-multiline-statements-d034c98e36f8">Why you should enforce Dangling Commas for Multiline Statements</a></p>
+
+
+
+</body>
+
+</html>

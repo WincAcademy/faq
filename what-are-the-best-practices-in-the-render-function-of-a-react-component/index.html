@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="what-are-the-best-practices-in-the-render-function-of-a-react-component">What are the best practices in the render function of a React component?</h1>
+<p>You should try to keep your render functions simple and clean.</p>
+<p>Don't</p>
+<ul>
+<li>define functions inside of the render method (they'll be defined again and again, making your code less fast)</li>
+<li>put a lot of logic in your render function, some conditionals are fine, but do complex data transformations outside of the render function to make it easier to test</li>
+</ul>
+
+
+
+</body>
+
+</html>

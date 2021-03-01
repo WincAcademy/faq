@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title>Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="/">
+        <h1 class="main-title">WINC FAQ</h1>
+    </a>
+    
+<h1 id="hoe-zorg-ik-voor-format-on-save-in-vscode">Hoe zorg ik voor 'Format On Save' in VSCode?</h1>
+<h2 id="formatten">Formatten</h2>
+<p>Met formatten bedoelen we: het juist gebruiken van spaties, tabs en enters. </p>
+<ul>
+<li>
+<p>Onjuist voorbeeld</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">&lt;!-- Onjuist: --&gt;
+</span><span style="color:#c0c5ce;">&lt;main&gt;
+</span><span style="color:#c0c5ce;">					      &lt;ul&gt;
+</span><span style="color:#c0c5ce;">								&lt;li&gt; Boter &lt;/li&gt;
+</span><span style="color:#c0c5ce;">								                 &lt;li&gt; Kaas &lt;/li&gt;
+</span><span style="color:#c0c5ce;">								&lt;li&gt; Eieren &lt;/li&gt;
+
+</span><span style="color:#c0c5ce;">&lt;/ul&gt;
+
+</span><span style="color:#c0c5ce;">    &lt;/main&gt;
+</span></code></pre></li>
+<li>
+<p>Juist voorbeeld</p>
+<pre style="background-color:#2b303b;">
+<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">&lt;main&gt;
+</span><span style="color:#c0c5ce;">  &lt;ul&gt;
+</span><span style="color:#c0c5ce;">    &lt;li&gt;Boter&lt;/li&gt;
+</span><span style="color:#c0c5ce;">    &lt;li&gt;Kaas&lt;/li&gt;
+</span><span style="color:#c0c5ce;">    &lt;li&gt;Eieren&lt;/li&gt;
+</span><span style="color:#c0c5ce;">  &lt;/ul&gt;
+</span><span style="color:#c0c5ce;">&lt;/main&gt;
+</span></code></pre></li>
+</ul>
+<p>Let op: voor je computer maakt dit niet uit. Jouw browser is helemaal tevreden met het onjuiste voorbeeld en zal het ook netjes aan je presenteren. Echter is het voor ons mensen veel beter lezen en maak je minder fouten als je op de juiste manier je files formatteert. </p>
+<p>Gelukkig hoef je dat niet handmatig te doen ⭐</p>
+<p>VSCode heeft een hele handige instelling:</p>
+<p>Code &gt; Preferences &gt; Settings &gt; zoek naar 'format on save' &gt; vink aan</p>
+<p><img src="@/format-on-save.png" alt="format-on-save.png" /></p>
+
+
+
+</body>
+
+</html>
