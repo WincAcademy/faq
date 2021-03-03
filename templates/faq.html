@@ -6,16 +6,16 @@
 <section>
     <table id="faqtable" class="display compact">
         <thead>
-            <tr>
-                <th>Question</th>
-                <th>Tags</th>
+            <tr class="table-headings">
+                <th class="question-header">Question</th>
+                <th class="tag-header">Tags</th>
             </tr>
         </thead>
         <tbody>
             {% for page in section.pages %}
             <tr>
-                <td><a class="capitalize" href="{{ page.permalink | safe }}">{{ page.title }}</a></td>
-                <td data-orderable="false">
+                <td><a class="question-link" href="{{ page.permalink | safe }}">{{ page.title }}</a></td>
+                <td data-orderable="false" class="tag-col">
                     {% for tag in page.extra.tags %}
                     <label class="tag {{tag}}">{{tag}}</label>
                     {% endfor %}
@@ -31,7 +31,10 @@
     $(document).ready(function () {
         $('#faqtable').DataTable({
             "paging": false,
-            "order": [[0, "asc"]]
+            "order": [[0, "asc"]],
+            "columnDefs": [
+                { "width": "20%", "targets": 1 }
+            ]
         });
     });
 </script>
