@@ -3,6 +3,10 @@
 
 body
     font-family: 'Roboto', sans-serif
+    background-color: white
+
+th
+    margin-bottom: 20px
 
 .tag
     background: #588fe5
@@ -10,12 +14,16 @@ body
     color: #fff
     position: relative
     padding: 5px
-    border-radius: 3px
-    margin: 0 10px 0 0
+    border-radius: 5px
+    margin: 10px 10px 10px 0
+    padding: 10px
     text-decoration: none
 
 .question-link
-    color: $winc-main-blue
+    border-radius: 5px
+    color: $winc-deep-blue
+    display: block
+    padding: 20px
 
     &:hover
         color: white
@@ -26,10 +34,12 @@ body
 
 .question-header,
 .tag-header
-    background-color: $winc-tertiary-blue
-    color: white
-    text-align: center
+    background-color: white
+    color: $winc-deep-blue
+    font-weight: bold
+    text-align: left
     text-transform: uppercase
+    font-size: 2em
 
 .main-title
     text-align: center
@@ -43,3 +53,20 @@ body
 .logo img
     width: 100%
     height: auto
+
+.dataTables_filter,
+.dataTables_filter label,
+.dataTables_filter label input 
+    color: black
+    width: 100%
+    height: 50px
+    padding: 20px
+    border-radius: 50px
+    margin-bottom: 20px
+    text-align: center
+    font-size: 30px
+
+.dataTables_wrapper .dataTables_filter input
+    border: 1px dashed
+    border-radius: 5px
+
