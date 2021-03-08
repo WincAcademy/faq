@@ -15,9 +15,9 @@ Wat 'netjes' is is subjectief. Maar waar vrijwel alle developers het over eens z
 
 ## Formatter voor JavaScript
 
-Je kan [Prettier](https://www.notion.so/wincacademy/Prettier-autoformat-JavaScript-daaf301678b44d0ab11d43b28e64195e) gebruiken om je JavaScript code automatisch 'netjes' te krijgen. Hiermee maak je het jezelf een stuk makkelijker. Geen formatter gebruiken is zonde van je tijd. 
-
-[Prettier · Opinionated Code Formatter](https://prettier.io/)
+Je kan [Prettier](https://prettier.io/) gebruiken om je JavaScript code
+automatisch 'netjes' te krijgen. Hiermee maak je het jezelf een stuk
+makkelijker. Geen formatter gebruiken is zonde van je tijd. 
 
 ## Formatter voor Python
 

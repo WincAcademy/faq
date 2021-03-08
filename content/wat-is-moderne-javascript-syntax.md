@@ -12,13 +12,13 @@ JavaScript is een taal die al een tijdje bestaat. In de afgelopen 10 jaar zijn e
 
 Oud:
 
-```jsx
+```js
 var a = 1;
 ```
 
 Nieuw:
 
-```jsx
+```js
 const a = 1;
 // of als de waarde moet kunnen veranderen: let
 let b = 2;
@@ -28,7 +28,7 @@ let b = 2;
 
 Oud:
 
-```jsx
+```js
 function foo () {
   return 4;
 }
@@ -36,7 +36,7 @@ function foo () {
 
 Nieuw:
 
-```jsx
+```js
 const foo = () => 4;
 ```
 
@@ -44,13 +44,13 @@ const foo = () => 4;
 
 Oud:
 
-```jsx
+```js
 'Hello ' + name;
 ```
 
 Nieuw:
 
-```jsx
+```js
 `Hello ${name}`
 ```
 
@@ -58,7 +58,7 @@ Nieuw:
 
 Oud:
 
-```jsx
+```js
 const qux = [1,2,3,4];
 for (var i = 0; i < qux.length; i++){
   console.log(qux[i]);
@@ -67,7 +67,7 @@ for (var i = 0; i < qux.length; i++){
 
 Nieuw:
 
-```jsx
+```js
 const qux = [1,2,3,4];
 qux.forEach(console.log);
 ```
@@ -82,7 +82,7 @@ Voorbeeld gekopieerd van [Mosh](https://programmingwithmosh.com/javascript/essen
 
 Oud:
 
-```jsx
+```js
 const person = { 
    name: 'Mosh', 
    address: {
@@ -100,7 +100,7 @@ const state = person.address.billing.state;
 
 Nieuw:
 
-```jsx
+```js
 const person = { 
    name: 'Mosh', 
    address: {

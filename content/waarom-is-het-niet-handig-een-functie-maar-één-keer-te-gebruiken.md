@@ -10,7 +10,7 @@ Functies zijn ontzettend handig en je gaat ze heel vaak gebruiken. Maar soms heb
 
 Sommige mensen willen nog wel eens dit soort code schrijven:
 
-```jsx
+```js
 const addEventListenerToButton = function() {
   const button = document.querySelector('button');
   button.addEventListener('click', function() {
@@ -36,7 +36,7 @@ Functies zijn handig als je:
 
 Het voorbeeld hierboven kan ook zo geschreven worden:
 
-```jsx
+```js
 const button = document.querySelector('button');
 button.addEventListener('click', function() {
   console.log('I was clicked');

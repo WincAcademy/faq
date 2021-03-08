@@ -26,7 +26,7 @@ Voorbeeld:
 - daar willen we het kwadraat van
 - en dat nieuwe array dan console.loggen
 
-```jsx
+```js
 const arr = [1, 2, 3, 4, 5, 6, 7, 8];
 const newArray = [];
 for (let i = 0; i < arr.length; i++) {
@@ -39,7 +39,7 @@ console.log(newArray);
 
 Als de berekeningen die je doet in een aparte functie staan dan ziet het er met for loops zo uit:
 
-```jsx
+```js
 const arr = [1, 2, 3, 4, 5, 6, 7, 8];
 const isEven = number => number % 2 === 0;
 const calculateSquare = number => number * number;
@@ -55,7 +55,7 @@ console.log(newArray)
 
 Met array methods ziet het er al meteen wat 'schoner' uit:
 
-```jsx
+```js
 const arr = [1, 2, 3, 4, 5, 6, 7, 8];
 const evenNumbers = arr.filter(number => number % 2 === 0);
 const squares = evenNumbers.map(number => number * number);
@@ -64,14 +64,14 @@ console.log(squares);
 
 Je kan de array methods ook wat compacter opschrijven:
 
-```jsx
+```js
 const arr = [1, 2, 3, 4, 5, 6, 7, 8];
 console.log(arr.filter(n => n % 2 === 0).map(n => n * n));
 ```
 
 Als de berekeningen die je doet in een aparte functie staan ziet de code met array methods er nog 'cleaner uit':
 
-```jsx
+```js
 const arr = [1, 2, 3, 4, 5, 6, 7, 8];
 const isEven = number => number % 2 === 0;
 const calculateSquare = number => number * number;

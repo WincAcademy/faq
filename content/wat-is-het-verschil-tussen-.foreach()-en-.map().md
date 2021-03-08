@@ -17,7 +17,7 @@ created = "Jun 24, 2020 2:53 PM"
 
 Voorbeeld:
 
-```jsx
+```js
 const myArray = [1, 2, 3];
 
 myArray.forEach(arrayItem => {
@@ -35,7 +35,7 @@ myArray.forEach(arrayItem => {
 
 Voorbeeld:
 
-```jsx
+```js
 const myArray = [1, 2, 3];
 
 const doubleValueArray = myArray.map(arrayItem => arrayItem * 2);
@@ -48,7 +48,7 @@ console.log(doubleValueArray);
 
 Het heeft dus weinig zin om een nieuwe variabele te assignen aan een forEach loop, zoals op deze manier:
 
-```jsx
+```js
 const doubleValueArray = array => array.forEach(element => {
     console.log(element *2);
 });

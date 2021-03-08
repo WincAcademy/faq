@@ -8,7 +8,7 @@ created = "Dec 17, 2019 11:54 AM"
 
 Dit is string interpolation: 
 
-```jsx
+```js
 let title = 'Mrs.';
 let name = 'Doubtfire';
 let greeting = `Dear ${title} ${name}`; // 'Dear Mrs. Doubtfire'
@@ -26,7 +26,7 @@ Hoe ze te gebruiken? →
 
 ⚠️ Let op: als je maar één string hebt kun je gewoon die string gebruiken dan hoef je niet te interpoleren:
 
-```jsx
+```js
 let name = 'Fresh Prince';
 console.log(`${name}`); // 'Fresh Prince' (overbodig gebruik van interpolatie)
 console.log(name); // 'Fresh Prince'

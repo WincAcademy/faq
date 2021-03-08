@@ -26,7 +26,9 @@ Het woord 'code' is net als het woord 'politie': altijd enkelvoud.
 - 'de codes voor promises zijn moeilijk'
 - 'bepaalde codes in dit programma zijn onveilig'
 
-PS: **Wees geen Rian van Rijbroek (Cyber Hecks)** 
-*'Je zag dat er codes bij banken binnen zaten..Russische en Iraanse codes... en Noord-Korea'*
+PS: **Wees geen Rian van Rijbroek (Cyber Hecks)**:
 
-[https://youtu.be/KWEdxNWtOpI?t=19](https://youtu.be/KWEdxNWtOpI?t=19)
+> 'Je zag dat er codes bij banken binnen zaten..Russische en Iraanse codes...
+> en Noord-Korea'
+
+{{ youtube(id="KWEdxNWtOpI") }}

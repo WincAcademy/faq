@@ -39,7 +39,7 @@ Hieronder een voorbeeld om dit element te maken en vast te maken aan de ul.
 </li>
 ```
 
-```jsx
+```js
 const list = document.querySelector('#list')
 let newLi = document.createElement('li')
 newLi.setAttribute('class', status)
@@ -55,7 +55,7 @@ list.appendChild(newLi).
 
 **Alternatief met template literals:**
 
-```jsx
+```js
 const list = document.querySelector('#list');
 const listItemRaw = `
   <li class='status'>

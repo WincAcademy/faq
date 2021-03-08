@@ -10,7 +10,7 @@ We say code is 'deeply nested' when your program can take a lot of different pat
 
 An example in JavaScript:
 
-```jsx
+```js
 const startCar = person => {
     if (person.age >= 18) {
         if (hasDriversLicense(person)) {
@@ -28,7 +28,7 @@ const startCar = person => {
 
 Another example:
 
-```jsx
+```js
 // Check if item is available for sale
 if (item.IsAvailableForSale)
 {
@@ -100,7 +100,7 @@ When you're inside of a function (and most code is written in functions) it's of
 
 For example:
 
-```jsx
+```js
 // Deeply nested
 const startCar = person => {
     if (person.age >= 18) {
@@ -135,7 +135,7 @@ Some people would argue that having a lot early returns in your code is itself p
 
 Another thing you can do is to gather a bunch of conditionals together, maybe even give them a temporary variable.
 
-```jsx
+```js
 // Deeply nested
 const startCar = person => {
     if (person.age >= 18) {
@@ -169,7 +169,7 @@ const startCar = person => {
 
 We can make deeply nested code simpler by using functions to divide up our conditionals into different functions.
 
-```jsx
+```js
 // Deeply nested
 const startCar = person => {
     if (person.age >= 18) {

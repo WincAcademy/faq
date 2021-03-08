@@ -22,7 +22,7 @@ Anders gezegd, bij een functie die gebruik maakt van globale variabelen is het:
 
 Bij dit stuk code geeft `readFoo()` de 1e en 2e keer iets anders terug omdat we de global variable gebruiken.
 
-```jsx
+```js
 let foo = 3;
 
 const readFoo = () => {

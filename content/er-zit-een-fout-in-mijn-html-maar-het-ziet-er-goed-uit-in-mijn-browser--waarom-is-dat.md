@@ -3,8 +3,8 @@ title = "Er zit een fout in mijn HTML maar het ziet er goed uit in mijn browser,
 extra.tags =[ "html",]
 created = "Mar 5, 2020 10:20 AM"
 +++
-# HTML: Er zit een fout in mijn HTML maar het ziet er goed uit in mijn browser, waarom is dat? (lint, format)
 
+# HTML: Er zit een fout in mijn HTML maar het ziet er goed uit in mijn browser, waarom is dat? (lint, format)
 
 Browsers zijn zo gebouwd dat ze zo goed als het lukt HTML proberen te lezen. Als ze een fout tegenkomen gaan ze alsnog proberen er het beste van te maken.
 

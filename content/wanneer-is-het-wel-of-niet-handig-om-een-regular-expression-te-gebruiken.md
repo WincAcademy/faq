@@ -18,7 +18,7 @@ Als je wil weten of een string met 'abc' begint kun je dat doen met regex. Maar 
 
 Als je wil weten of een string uppercase of lowercase karakters bevat kun je dit doen:
 
-```jsx
+```js
 const name = 'Winc Academy';
 const hasUpperCase = str => str.toLowerCase !== str;
 const hasLowerCase = str => str.toUpperCase !== str;

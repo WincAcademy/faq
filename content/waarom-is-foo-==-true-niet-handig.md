@@ -50,7 +50,7 @@ In JavaScript geldt hetzelfde:
 
 Omslachtig:
 
-```jsx
+```js
 // 🛑
 const foo = true;
 const bar = false;
@@ -70,7 +70,7 @@ if (foo === true && bar !== false) {
 
 Beter:
 
-```jsx
+```js
 // ✅
 const foo = true;
 const bar = false;

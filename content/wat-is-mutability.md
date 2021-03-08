@@ -25,7 +25,7 @@ Sommige van deze 'operaties' (dingen die je doet met een variabele) *veranderen*
 
 Voorbeelden:
 
-```jsx
+```js
 let a = 5;
 let movies = ['Die Hard', 'Robocop', 'Back to the Future'];
 
@@ -60,10 +60,4 @@ Die operaties (functies) die we zelf maken kunnen *ook* mutable of immutable zij
 * Muteren we de variabele in de functie?  ➡️ Dan is de functie mutable. 
 * Muteren we de variabele niet? ➡️ Dan is de functie immutable.
 
-Meer informatie over de ingebouwde Array methods die al of niet muteren?
-
-[Array Methods: Mutability](https://www.notion.so/Array-Methods-Mutability-d3773ae151284d118b9ab5985ba83487)
-
-En:
-
-[Does it mutate?](https://doesitmutate.xyz/)
+In je opleiding leer je welke functies al dan niet muteren.

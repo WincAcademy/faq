@@ -8,7 +8,7 @@ created = "Jan 11, 2021 5:44 PM"
 
 Before the ES2019 version of JavaScript you *had* to write your React classes like this if you wanted to set an initial state:
 
-```jsx
+```js
 class App extends Component {
   constructor() {
     super();
@@ -37,7 +37,7 @@ class App extends Component {
 
 With ES2019 we got [class fields](https://javascript.info/class#class-fields). This means we no longer *need* to set the state in the constructor:
 
-```jsx
+```js
 class App extends Component {
   state = {
     counter: 0,

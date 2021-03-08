@@ -10,7 +10,7 @@ Slice en Splice zijn standaard JavaScript Array methods. Voor beide methods zijn
 
 ### Splice
 
-```jsx
+```js
 let array = [1, 2, 3, 4, 5];
 let part = array.splice(2);
 
@@ -19,7 +19,7 @@ console.log(part); // outputs [3, 4, 5]
 
 `.splice()` **muteert** de orginele array en geeft de waardes `[3, 4, 5]` terug als een array van nummers. Door de mutatie is de orginele array veranderd:
 
-```jsx
+```js
 console.log(array); // outputs [1, 2]
 ```
 
@@ -27,7 +27,7 @@ Raadpleeg de [documentatie van Array.splice](https://developer.mozilla.org/nl/do
 
 ### Slice
 
-```jsx
+```js
 let array = [1, 2, 3, 4, 5];
 let part = array.slice(2);
 
@@ -36,7 +36,7 @@ console.log(part); // outputs [3, 4, 5]
 
 `.slice()` geeft de waardes `[3, 4, 5]` terug als een array van nummers. Door orginele array is onveranderd gebleven:
 
-```jsx
+```js
 console.log(array); // outputs [1, 2, 3, 4, 5]
 ```
 

@@ -8,7 +8,7 @@ Soms maak je een variabele aan die je maar één keer gebruikt. Daar kan je een 
 
 Voorbeeld:
 
-```jsx
+```js
 // Langer
 const liMenu = document.querySelector('.colormenu');
 liMenu.addEventListener('click', function() {

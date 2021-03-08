@@ -13,7 +13,7 @@ Met formatten bedoelen we: het juist gebruiken van spaties, tabs en enters.
 
 - Onjuist voorbeeld
 
-    ```jsx
+    ```js
     <!-- Onjuist: -->
     <main>
     					      <ul>
@@ -28,7 +28,7 @@ Met formatten bedoelen we: het juist gebruiken van spaties, tabs en enters.
 
 - Juist voorbeeld
 
-    ```jsx
+    ```js
     <main>
       <ul>
         <li>Boter</li>

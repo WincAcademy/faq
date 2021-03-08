@@ -8,7 +8,9 @@ created = "May 11, 2020 2:23 PM"
 
 Git kan heel veel files aan.
 
-Git in VSCode kan minder files aan, omdat VSCode ze allemaal moet laten zien, dus als er ineens heel veel files in je repository staan dan gaat Git in VSCode klagen.
+Git in VSCode kan minder files aan, omdat VSCode ze allemaal moet laten zien,
+dus als er ineens heel veel files in je repository staan dan gaat Git in VSCode
+klagen.
 
 Oplossing:
 
@@ -24,5 +26,5 @@ Oplossing:
 10. krijg je geen antwoord van git, dan is de laatste map van stap 7 de map waar je git repository in zit
 11. we gaan nu je git repository verwijderen, **maar niet je files**
 12. je git repository is een directory die `.git` heet, die directory (en **alleen** die directory!) kun je deleten
-13. zie je de `.git` directory niet? [kijk hier hoe je dit soort verborgen files wel kan zien](https://www.notion.so/Hoe-kan-ik-verborgen-files-dotfiles-zien-07188638fb6145e2b188ed78e3f10ee0)
+13. zie je de `.git` directory niet? Bekijk: [hoe kan ik verborgen files/dotfiles zien](@/hoe-kan-ik-verborgen-files-dotfiles-zien.md)
 14. laatste stap: maak je git repository nu op de *goeie* plek met `git init`

@@ -15,7 +15,7 @@ Tips:
 - Maak er een gewoonte van om elke keer als je een functie declareert of een if-statement neerzet, **meteen** de curly braces ook te sluiten. Daarna pas de inhoud te gaan vullen.
 - **Indentation**. 
 Juist formatteren van je bestanden en **indenten** van nieuwe loops/if-statements of functies kan je leven redden in curly brace chaos.
-- Gebruik [een extension](https://www.notion.so/wincacademy/Bracket-Pair-Colorizer-2-223642f5790a44fe8aa8ead774918df5) om op basis van kleur de open-en-sluit-accolades te zien
+- Gebruik [een extension](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) om op basis van kleur de open-en-sluit-accolades te zien
 
 ![curly-braces](@/curly-braces.png)
 

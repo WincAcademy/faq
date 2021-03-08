@@ -7,14 +7,21 @@ created = "Feb 26, 2020 10:39 AM"
 
 # Hoe manipuleer ik mijn HTML met JavaScript?
 
+Bij het ontwikkelen van een website of app, zal je regelmatig de
+documentstructuur van je site willen manipuleren. Dit doen we met het Document
+Object Model (DOM). Met de API (objects en methodes) van het DOM kunnen we de
+HTML van onze pagina manipuleren en maken we statische pagina's dynamisch.
 
-Bij het ontwikkelen van een website of app, zal je regelmatig de documentstructuur van je site willen manipuleren. Dit doen we met het Document Object Model (DOM). Met de API (objects en methodes) van het DOM kunnen we de HTML van onze pagina manipuleren en maken we statische pagina's dynamisch.
-
-Voordat je begint met het manipuleren van het DOM is het belangrijke om te beginnen met een statische opzet. Zorg ervoor dat je eerst de gewenste HTML en CSS uitschrijft voordat je interactie toevoegd. Denk goed na over welke HTML elementen je gebruikt en wat het eindresultaat moet zijn.
+Voordat je begint met het manipuleren van het DOM is het belangrijke om te
+beginnen met een statische opzet. Zorg ervoor dat je eerst de gewenste HTML en
+CSS uitschrijft voordat je interactie toevoegd. Denk goed na over welke HTML
+elementen je gebruikt en wat het eindresultaat moet zijn.
 
 ## Praktijkvoorbeeld
 
-Je gaat een nieuw winkelwagentje bouwen voor de webshop [bell.com](http://bell.com/). De producten van de klant worden opgehaald via een REST API en zijn tot je beschikking in de vorm van een JavaScript array.
+Je gaat een nieuw winkelwagentje bouwen voor de webshop
+[bell.com](http://bell.com/). De producten van de klant worden opgehaald via
+een REST API en zijn tot je beschikking in de vorm van een JavaScript array.
 
 De HTML structuur van het winkelwagentje ziet er als volg uit:
 
@@ -27,7 +34,7 @@ De HTML structuur van het winkelwagentje ziet er als volg uit:
 
 De array met producten ziet er als volgt uit:
 
-```jsx
+```js
 const products = [
     {
         name: 'Macbook Pro',
@@ -49,7 +56,7 @@ const products = [
 
 Nu kunnen we de DOM manipuleren met JavaScript zodat de producten van de klant worden getoond in het lijstje (`ul.products`) van het winkelwagentje:
 
-```jsx
+```js
 const itemsInCart = document.querySelector('.products');
 
 // (1) loop door de producten
@@ -74,8 +81,6 @@ Dit is een simpel voorbeeld, maar de mogelijkheden zijn eindeloos. Door gebruik 
 ## Handige links
 
 Voor nog veel meer informatie over de DOM en hoe je daar dingen mee kan doen:
-
-[Javascript  ](https://www.notion.so/Javascript-6008467c99cd49eca1f3ba6b167ccafb)
 
 [JavaScript HTML DOM](https://www.w3schools.com/js/js_htmldom.asp)
 

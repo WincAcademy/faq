@@ -14,7 +14,7 @@ Als je iets aan een variabele assigned doe je dit, je maakt een waarde (een expr
 
 Als je een functie maakt en die aan een variabele assigned doe je precies hetzelfde, je maakt een waarde (de function expression) en die *assign* je aan een variabele. Daarom wil je daarna ook een `;`.
 
-```jsx
+```js
 const wordIsLongerThan5Chars = word => word.length > 5;
 
 const isOldXmenMovie = movie => {

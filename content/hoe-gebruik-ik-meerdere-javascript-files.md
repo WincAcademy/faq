@@ -34,14 +34,14 @@ Maar als we nou een andere JavaScript file hebben waarvan we willen dat `main.js
 1. de file die we willen inladen moet iets 'exporten', zie onder
 2. de file die een andere file wil inladen moet 'requiren'
 
-```jsx
+```js
 // vegetables.js
 const vegetables = ['peas', 'corn', 'potatoes'];
 
 module.exports = {vegetables};
 ```
 
-```jsx
+```js
 // main.js
 const vegetablesModule = require('./vegetables.js');
 const vegetables = vegetablesModule.vegetables;
