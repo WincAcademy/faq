@@ -8,7 +8,7 @@ created = "Feb 18, 2020 12:19 PM"
 
 Het korte antwoord: globale variabelen zijn variabelen die *buiten* functies zijn gemaakt. Vanwege de 'scope' regels in JavaScript kan alle code bij die globale variabelen en ze dus ook lezen én aanpassen. Voorbeeld:
 
-```jsx
+```js
 let foo = 3;
 
 const readFoo = () => {

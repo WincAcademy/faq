@@ -25,7 +25,7 @@ Sommige van deze 'operaties' (dingen die je doet met een variabele) *veranderen*
 
 Voorbeelden:
 
-```jsx
+```js
 let a = 5;
 let movies = ['Die Hard', 'Robocop', 'Back to the Future'];
 

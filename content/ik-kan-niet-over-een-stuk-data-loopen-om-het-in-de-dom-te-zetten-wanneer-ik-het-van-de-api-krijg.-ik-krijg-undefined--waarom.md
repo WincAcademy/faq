@@ -9,7 +9,7 @@ ook `undefined`, omdat de array `data.genres`, geen property `name` heeft.
 
 ## Een voorbeeld:
 
-```jsx
+```js
 data { 
  genres: [
         {id: Blah, name: 'Action'}, 

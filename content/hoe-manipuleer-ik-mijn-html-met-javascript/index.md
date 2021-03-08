@@ -34,7 +34,7 @@ De HTML structuur van het winkelwagentje ziet er als volg uit:
 
 De array met producten ziet er als volgt uit:
 
-```jsx
+```js
 const products = [
     {
         name: 'Macbook Pro',
@@ -56,7 +56,7 @@ const products = [
 
 Nu kunnen we de DOM manipuleren met JavaScript zodat de producten van de klant worden getoond in het lijstje (`ul.products`) van het winkelwagentje:
 
-```jsx
+```js
 const itemsInCart = document.querySelector('.products');
 
 // (1) loop door de producten

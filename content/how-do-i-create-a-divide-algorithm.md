@@ -6,7 +6,7 @@ created = "Jan 25, 2021 6:11 PM"
 # How do I create a 'divide algorithm'?
 
 
-```jsx
+```js
 /*
 We've got a series of objects. We want to divide or categorize those objects
 into separate 'buckets'. We want to do that on the basis of an attribute.

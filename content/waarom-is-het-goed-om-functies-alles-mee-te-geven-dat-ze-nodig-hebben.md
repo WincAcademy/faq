@@ -12,7 +12,7 @@ Lees eerst deze vraag:
 
 Nu is het niet alleen zo dat globale variabelen gevaarlijk of onhandig kunnen zijn. Dat kan ook gelden in een meer 'lokale' scope. Zie dit voorbeeld:
 
-```jsx
+```js
 console.log('---');
 const langeFunctie = () => {
   let bar = 5;

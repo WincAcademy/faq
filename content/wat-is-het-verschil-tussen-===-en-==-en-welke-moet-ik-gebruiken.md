@@ -17,7 +17,7 @@ De laatste 2 noemen we de 'strict equality operators'.
 
 Die eerste 2 zijn niet handig om te gebruiken. En wel om de volgende redenen.
 
-```jsx
+```js
 0 == False; // true
 '' == False; // true
 ```

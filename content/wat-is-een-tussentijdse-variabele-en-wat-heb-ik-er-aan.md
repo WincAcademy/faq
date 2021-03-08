@@ -10,7 +10,7 @@ In code is het mogelijk om heel veel dingen op elkaar te proppen en in elkaar te
 
 Een voorbeeld van een te 'in elkaar gedrukte' functie:
 
-```jsx
+```js
 const getRandomItem = arr => arr[Math.floor(Math.random() * arr.length)];
 
 const beatles = ['John', 'Paul', 'George', 'Ringo', 'Kanye'];
@@ -19,7 +19,7 @@ console.log(getRandomItem(beatles));
 
 Hieronder dezelfde code maar dan met een tijdelijke variabele er tussen waardoor de code wat makkelijker leesbaar wordt:
 
-```jsx
+```js
 const getRandomItem = arr => {
     const randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];

@@ -10,7 +10,7 @@ Zie https://javascript.info/types
 
 **Hoe controleer ik of een waarde gelijk is aan** `NaN` **?**
 
-```jsx
+```js
 const waarde = NaN;
 
 if (Number.isNan(waarde)) {
