@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title> How bad is duplication in my test code? |  Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://static.wincacademy.nl/css/style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="https://static.wincacademy.nl/logos/favicon.png">
+</head>
+
+<body>
+    <div class="logo">
+        <img src="https://static.wincacademy.nl/logos/main-logo.png">
+    </div>
+    <a href="/">
+        <h1 class="main-title">Frequently Asked Questions</h1>
+    </a>
+    
+<h1 id="how-bad-is-duplication-in-my-test-code">How bad is duplication in my test code?</h1>
+<p>Here's a famous quote about debugging.</p>
+<blockquote>
+<p>Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?
+— The Elements of Programming Style, 2nd edition, chapter 2</p>
+</blockquote>
+<p>The same can be said about testing code, to a degree.</p>
+<h2 id="keep-your-testing-code-simple">Keep your testing code simple</h2>
+<p>A good rule of thumb is that your tests should be easy to read. You should not
+have to jump around a lot in your code (to helper functions) to be able to
+understand a single test case.</p>
+<p>It can be tempting to write a lot of helper functions to make your test code
+more DRY. In general we advise against this as this makes your test code harder
+to read. Having duplication in your tests is also less of a problem than having
+them in your code-under-test. In general test code is changed less often than
+the code-under-test.</p>
+<p>You can jump to 7:22 in <a href="https://vimeo.com/504723308/5a35db2299">this video</a> to
+see a (Dutch language) live-lesson on this very topic.</p>
+<p>There <em>is</em> a point where you might want to DRY your test code, this is when you
+need to do a lot of similar setup for a number of tests. So things like mocking
+an API or pre-filling a database. You should put that kind of functionality in
+the setup or fixture of your test code.</p>
+<p>So, to answer the question: duplication in your test code is not bad.</p>
+
+
+
+</body>
+
+</html>
