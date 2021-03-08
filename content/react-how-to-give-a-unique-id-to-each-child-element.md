@@ -22,7 +22,7 @@ Read this article for more info:
 
 Or see this video:
 
-[ReactJS Tutorial - 19 - Index as Key Anti-pattern](https://youtu.be/xlPxnc5uUPQ)
+{{ youtube(id="xlPxnc5uUPQ") }}
 
 ## Best practice
 
