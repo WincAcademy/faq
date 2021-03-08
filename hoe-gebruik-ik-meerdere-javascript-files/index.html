@@ -44,17 +44,17 @@
 <li>de file die een andere file wil inladen moet 'requiren'</li>
 </ol>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// vegetables.js
-const vegetables = [&#39;peas&#39;, &#39;corn&#39;, &#39;potatoes&#39;];
+<code class="language-js" data-lang="js"><span style="color:#65737e;">// vegetables.js
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">vegetables </span><span style="color:#c0c5ce;">= [&#39;</span><span style="color:#a3be8c;">peas</span><span style="color:#c0c5ce;">&#39;, &#39;</span><span style="color:#a3be8c;">corn</span><span style="color:#c0c5ce;">&#39;, &#39;</span><span style="color:#a3be8c;">potatoes</span><span style="color:#c0c5ce;">&#39;];
 
-module.exports = {vegetables};
+module.exports = {</span><span style="color:#bf616a;">vegetables</span><span style="color:#c0c5ce;">};
 </span></code></pre><pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// main.js
-const vegetablesModule = require(&#39;./vegetables.js&#39;);
-const vegetables = vegetablesModule.vegetables;
+<code class="language-js" data-lang="js"><span style="color:#65737e;">// main.js
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">vegetablesModule </span><span style="color:#c0c5ce;">= </span><span style="color:#96b5b4;">require</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">./vegetables.js</span><span style="color:#c0c5ce;">&#39;);
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">vegetables </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">vegetablesModule</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">vegetables</span><span style="color:#c0c5ce;">;
 
-console.log(&#39;De eerste groente is:&#39;);
-console.log(vegetables[0]);
+</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">De eerste groente is:</span><span style="color:#c0c5ce;">&#39;);
+</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">vegetables</span><span style="color:#c0c5ce;">[</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">]);
 </span></code></pre><h2 id="in-een-react-applicatie">In een React applicatie</h2>
 <p>In een React applicatie volg je het patroon dat je ziet als je <code>create-react-app</code> draait.</p>
 

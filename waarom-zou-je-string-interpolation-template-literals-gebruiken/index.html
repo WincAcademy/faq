@@ -27,9 +27,9 @@
 <h1 id="waarom-zou-je-string-interpolation-template-literals-gebruiken">waarom zou je string interpolation (template literals) gebruiken?</h1>
 <p>Dit is string interpolation: </p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let title = &#39;Mrs.&#39;;
-let name = &#39;Doubtfire&#39;;
-let greeting = `Dear ${title} ${name}`; // &#39;Dear Mrs. Doubtfire&#39;
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">let </span><span style="color:#bf616a;">title </span><span style="color:#c0c5ce;">= &#39;</span><span style="color:#a3be8c;">Mrs.</span><span style="color:#c0c5ce;">&#39;;
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">name </span><span style="color:#c0c5ce;">= &#39;</span><span style="color:#a3be8c;">Doubtfire</span><span style="color:#c0c5ce;">&#39;;
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">greeting </span><span style="color:#c0c5ce;">= `</span><span style="color:#a3be8c;">Dear ${</span><span style="color:#bf616a;">title</span><span style="color:#a3be8c;">} ${</span><span style="color:#bf616a;">name</span><span style="color:#a3be8c;">}</span><span style="color:#c0c5ce;">`; </span><span style="color:#65737e;">// &#39;Dear Mrs. Doubtfire&#39;
 </span></code></pre>
 <p>Als je strings en variabelen wil combineren tot één lange string kan dat het beste met 'string interpolation'.</p>
 <p>Deze manier van strings en variabelen combineren is meestal leesbaarder en makkelijker onderhoudbaar dan bijv string concatenatie.</p>
@@ -39,9 +39,9 @@ let greeting = `Dear ${title} ${name}`; // &#39;Dear Mrs. Doubtfire&#39;
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals</a></p>
 <p>⚠️ Let op: als je maar één string hebt kun je gewoon die string gebruiken dan hoef je niet te interpoleren:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let name = &#39;Fresh Prince&#39;;
-console.log(`${name}`); // &#39;Fresh Prince&#39; (overbodig gebruik van interpolatie)
-console.log(name); // &#39;Fresh Prince&#39;
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">let </span><span style="color:#bf616a;">name </span><span style="color:#c0c5ce;">= &#39;</span><span style="color:#a3be8c;">Fresh Prince</span><span style="color:#c0c5ce;">&#39;;
+</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(`</span><span style="color:#a3be8c;">${</span><span style="color:#bf616a;">name</span><span style="color:#a3be8c;">}</span><span style="color:#c0c5ce;">`); </span><span style="color:#65737e;">// &#39;Fresh Prince&#39; (overbodig gebruik van interpolatie)
+</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">name</span><span style="color:#c0c5ce;">); </span><span style="color:#65737e;">// &#39;Fresh Prince&#39;
 </span></code></pre>
 
 

@@ -61,38 +61,38 @@
 <p>In JavaScript geldt hetzelfde:</p>
 <p>Omslachtig:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// 🛑
-const foo = true;
-const bar = false;
+<code class="language-js" data-lang="js"><span style="color:#65737e;">// 🛑
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">foo </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">;
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">bar </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">false</span><span style="color:#c0c5ce;">;
 
-if (foo === true) {
-  console.log(&#39;foo == true&#39;);
-} else {
-  console.log(&#39;foo == false&#39;);
+</span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">foo </span><span style="color:#c0c5ce;">=== </span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">) {
+  </span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == true</span><span style="color:#c0c5ce;">&#39;);
+} </span><span style="color:#b48ead;">else </span><span style="color:#c0c5ce;">{
+  </span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == false</span><span style="color:#c0c5ce;">&#39;);
 }
 
-if (foo === true &amp;&amp; bar !== false) {
-  console.log(&#39;foo == true en bar == false&#39;);
-} else {
-  console.log(&#39;foo == false OF bar == true&#39;);
+</span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">foo </span><span style="color:#c0c5ce;">=== </span><span style="color:#d08770;">true </span><span style="color:#c0c5ce;">&amp;&amp; </span><span style="color:#bf616a;">bar </span><span style="color:#c0c5ce;">!== </span><span style="color:#d08770;">false</span><span style="color:#c0c5ce;">) {
+  </span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == true en bar == false</span><span style="color:#c0c5ce;">&#39;);
+} </span><span style="color:#b48ead;">else </span><span style="color:#c0c5ce;">{
+  </span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == false OF bar == true</span><span style="color:#c0c5ce;">&#39;);
 }
 </span></code></pre>
 <p>Beter:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// ✅
-const foo = true;
-const bar = false;
+<code class="language-js" data-lang="js"><span style="color:#65737e;">// ✅
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">foo </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">;
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">bar </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">false</span><span style="color:#c0c5ce;">;
 
-if (foo) {
-  console.log(&#39;foo == true&#39;);
-} else {
-  console.log(&#39;foo == false&#39;);
+</span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">foo</span><span style="color:#c0c5ce;">) {
+  </span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == true</span><span style="color:#c0c5ce;">&#39;);
+} </span><span style="color:#b48ead;">else </span><span style="color:#c0c5ce;">{
+  </span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == false</span><span style="color:#c0c5ce;">&#39;);
 }
 
-if (foo &amp;&amp; !bar) {
-  console.log(&#39;foo == true en bar == false&#39;);
-} else {
-  console.log(&#39;foo == false OF bar == true&#39;);
+</span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">foo </span><span style="color:#c0c5ce;">&amp;&amp; !</span><span style="color:#bf616a;">bar</span><span style="color:#c0c5ce;">) {
+  </span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == true en bar == false</span><span style="color:#c0c5ce;">&#39;);
+} </span><span style="color:#b48ead;">else </span><span style="color:#c0c5ce;">{
+  </span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">foo == false OF bar == true</span><span style="color:#c0c5ce;">&#39;);
 }
 </span></code></pre>
 

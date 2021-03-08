@@ -29,26 +29,26 @@
 <p>Slice en Splice zijn standaard JavaScript Array methods. Voor beide methods zijn valide use-cases, maar belangrijk is dat je het verschil begrijpt (hint: <strong>mutability</strong>).</p>
 <h3 id="splice">Splice</h3>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let array = [1, 2, 3, 4, 5];
-let part = array.splice(2);
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">let </span><span style="color:#bf616a;">array </span><span style="color:#c0c5ce;">= [</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">];
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">part </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">array</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">splice</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">);
 
-console.log(part); // outputs [3, 4, 5]
+</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">part</span><span style="color:#c0c5ce;">); </span><span style="color:#65737e;">// outputs [3, 4, 5]
 </span></code></pre>
 <p><code>.splice()</code> <strong>muteert</strong> de orginele array en geeft de waardes <code>[3, 4, 5]</code> terug als een array van nummers. Door de mutatie is de orginele array veranderd:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">console.log(array); // outputs [1, 2]
+<code class="language-js" data-lang="js"><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">array</span><span style="color:#c0c5ce;">); </span><span style="color:#65737e;">// outputs [1, 2]
 </span></code></pre>
 <p>Raadpleeg de <a href="https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">documentatie van Array.splice</a></p>
 <h3 id="slice">Slice</h3>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let array = [1, 2, 3, 4, 5];
-let part = array.slice(2);
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">let </span><span style="color:#bf616a;">array </span><span style="color:#c0c5ce;">= [</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">];
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">part </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">array</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">slice</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">);
 
-console.log(part); // outputs [3, 4, 5]
+</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">part</span><span style="color:#c0c5ce;">); </span><span style="color:#65737e;">// outputs [3, 4, 5]
 </span></code></pre>
 <p><code>.slice()</code> geeft de waardes <code>[3, 4, 5]</code> terug als een array van nummers. Door orginele array is onveranderd gebleven:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">console.log(array); // outputs [1, 2, 3, 4, 5]
+<code class="language-js" data-lang="js"><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">array</span><span style="color:#c0c5ce;">); </span><span style="color:#65737e;">// outputs [1, 2, 3, 4, 5]
 </span></code></pre>
 <p>Raadpleeg de <a href="https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">documentatie van Array.slice</a></p>
 

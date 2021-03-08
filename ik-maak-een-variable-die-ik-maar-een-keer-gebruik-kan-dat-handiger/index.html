@@ -28,15 +28,15 @@
 <p>Soms maak je een variabele aan die je maar één keer gebruikt. Daar kan je een goeie reden voor hebben, maar vaak kan je in JavaScript dat dingen in één keer doen.</p>
 <p>Voorbeeld:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// Langer
-const liMenu = document.querySelector(&#39;.colormenu&#39;);
-liMenu.addEventListener(&#39;click&#39;, function() {
-  toggle();
+<code class="language-js" data-lang="js"><span style="color:#65737e;">// Langer
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">liMenu </span><span style="color:#c0c5ce;">= document.</span><span style="color:#96b5b4;">querySelector</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">.colormenu</span><span style="color:#c0c5ce;">&#39;);
+</span><span style="color:#bf616a;">liMenu</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">addEventListener</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">click</span><span style="color:#c0c5ce;">&#39;, </span><span style="color:#b48ead;">function</span><span style="color:#c0c5ce;">() {
+  </span><span style="color:#8fa1b3;">toggle</span><span style="color:#c0c5ce;">();
 });
 
-// Korter
-document.querySelector(&#39;.colormenu&#39;).addEventListener(&#39;click&#39;, function() {
-  toggle();
+</span><span style="color:#65737e;">// Korter
+</span><span style="color:#c0c5ce;">document.</span><span style="color:#96b5b4;">querySelector</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">.colormenu</span><span style="color:#c0c5ce;">&#39;).</span><span style="color:#96b5b4;">addEventListener</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">click</span><span style="color:#c0c5ce;">&#39;, </span><span style="color:#b48ead;">function</span><span style="color:#c0c5ce;">() {
+  </span><span style="color:#8fa1b3;">toggle</span><span style="color:#c0c5ce;">();
 });
 </span></code></pre>
 

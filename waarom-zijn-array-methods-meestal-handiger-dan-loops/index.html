@@ -43,47 +43,47 @@
 <li>en dat nieuwe array dan console.loggen</li>
 </ul>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-const newArray = [];
-for (let i = 0; i &lt; arr.length; i++) {
-  if (arr[i] % 2 === 0) {
-    newArray.push(arr[i] * arr[i]);
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">arr </span><span style="color:#c0c5ce;">= [</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">6</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">7</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">8</span><span style="color:#c0c5ce;">];
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">newArray </span><span style="color:#c0c5ce;">= [];
+</span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">i </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">; </span><span style="color:#bf616a;">i </span><span style="color:#c0c5ce;">&lt; </span><span style="color:#bf616a;">arr</span><span style="color:#c0c5ce;">.length; </span><span style="color:#bf616a;">i</span><span style="color:#c0c5ce;">++) {
+  </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">arr</span><span style="color:#c0c5ce;">[</span><span style="color:#bf616a;">i</span><span style="color:#c0c5ce;">] % </span><span style="color:#d08770;">2 </span><span style="color:#c0c5ce;">=== </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">) {
+    </span><span style="color:#bf616a;">newArray</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">push</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">arr</span><span style="color:#c0c5ce;">[</span><span style="color:#bf616a;">i</span><span style="color:#c0c5ce;">] * </span><span style="color:#bf616a;">arr</span><span style="color:#c0c5ce;">[</span><span style="color:#bf616a;">i</span><span style="color:#c0c5ce;">]);
   }
 }
-console.log(newArray);
+</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">newArray</span><span style="color:#c0c5ce;">);
 </span></code></pre>
 <p>Als de berekeningen die je doet in een aparte functie staan dan ziet het er met for loops zo uit:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-const isEven = number =&gt; number % 2 === 0;
-const calculateSquare = number =&gt; number * number;
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">arr </span><span style="color:#c0c5ce;">= [</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">6</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">7</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">8</span><span style="color:#c0c5ce;">];
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">isEven </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">number </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">number </span><span style="color:#c0c5ce;">% </span><span style="color:#d08770;">2 </span><span style="color:#c0c5ce;">=== </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">;
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">calculateSquare </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">number </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">number </span><span style="color:#c0c5ce;">* </span><span style="color:#bf616a;">number</span><span style="color:#c0c5ce;">;
 
-const newArray = [];
-for (let i = 0; i &lt; arr.length; i++) {
-  if (isEven(arr[i])) {
-    newArray.push(calculateSquare(arr[i]));
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">newArray </span><span style="color:#c0c5ce;">= [];
+</span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">i </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">; </span><span style="color:#bf616a;">i </span><span style="color:#c0c5ce;">&lt; </span><span style="color:#bf616a;">arr</span><span style="color:#c0c5ce;">.length; </span><span style="color:#bf616a;">i</span><span style="color:#c0c5ce;">++) {
+  </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">isEven</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">arr</span><span style="color:#c0c5ce;">[</span><span style="color:#bf616a;">i</span><span style="color:#c0c5ce;">])) {
+    </span><span style="color:#bf616a;">newArray</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">push</span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">calculateSquare</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">arr</span><span style="color:#c0c5ce;">[</span><span style="color:#bf616a;">i</span><span style="color:#c0c5ce;">]));
   }
 }
-console.log(newArray)
+</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">newArray</span><span style="color:#c0c5ce;">)
 </span></code></pre>
 <p>Met array methods ziet het er al meteen wat 'schoner' uit:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-const evenNumbers = arr.filter(number =&gt; number % 2 === 0);
-const squares = evenNumbers.map(number =&gt; number * number);
-console.log(squares);
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">arr </span><span style="color:#c0c5ce;">= [</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">6</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">7</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">8</span><span style="color:#c0c5ce;">];
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">evenNumbers </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">arr</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">filter</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">number </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">number </span><span style="color:#c0c5ce;">% </span><span style="color:#d08770;">2 </span><span style="color:#c0c5ce;">=== </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">);
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">squares </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">evenNumbers</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">map</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">number </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">number </span><span style="color:#c0c5ce;">* </span><span style="color:#bf616a;">number</span><span style="color:#c0c5ce;">);
+</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">squares</span><span style="color:#c0c5ce;">);
 </span></code></pre>
 <p>Je kan de array methods ook wat compacter opschrijven:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-console.log(arr.filter(n =&gt; n % 2 === 0).map(n =&gt; n * n));
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">arr </span><span style="color:#c0c5ce;">= [</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">6</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">7</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">8</span><span style="color:#c0c5ce;">];
+</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">arr</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">filter</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">n </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">n </span><span style="color:#c0c5ce;">% </span><span style="color:#d08770;">2 </span><span style="color:#c0c5ce;">=== </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">).</span><span style="color:#8fa1b3;">map</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">n </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">n </span><span style="color:#c0c5ce;">* </span><span style="color:#bf616a;">n</span><span style="color:#c0c5ce;">));
 </span></code></pre>
 <p>Als de berekeningen die je doet in een aparte functie staan ziet de code met array methods er nog 'cleaner uit':</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-const isEven = number =&gt; number % 2 === 0;
-const calculateSquare = number =&gt; number * number;
-console.log(arr.filter(isEven).map(calculateSquare));
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">arr </span><span style="color:#c0c5ce;">= [</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">6</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">7</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">8</span><span style="color:#c0c5ce;">];
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">isEven </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">number </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">number </span><span style="color:#c0c5ce;">% </span><span style="color:#d08770;">2 </span><span style="color:#c0c5ce;">=== </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">;
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">calculateSquare </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">number </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">number </span><span style="color:#c0c5ce;">* </span><span style="color:#bf616a;">number</span><span style="color:#c0c5ce;">;
+</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">arr</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">filter</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">isEven</span><span style="color:#c0c5ce;">).</span><span style="color:#8fa1b3;">map</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">calculateSquare</span><span style="color:#c0c5ce;">));
 </span></code></pre>
 <p>Bij deze laatste variant is het makkelijk om de kleine 'utility functions' die je hebt gemaakt ergens anders weer opnieuw te gebruiken.</p>
 

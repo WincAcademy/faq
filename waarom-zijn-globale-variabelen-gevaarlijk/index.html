@@ -37,25 +37,25 @@
 </ul>
 <p>Bij dit stuk code geeft <code>readFoo()</code> de 1e en 2e keer iets anders terug omdat we de global variable gebruiken.</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let foo = 3;
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">let </span><span style="color:#bf616a;">foo </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">;
 
-const readFoo = () =&gt; {
-  console.log(foo);
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">readFoo </span><span style="color:#c0c5ce;">= () </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+  </span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">foo</span><span style="color:#c0c5ce;">);
 };
 
-const changeFoo = () =&gt; {
-  foo = 30;
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">changeFoo </span><span style="color:#c0c5ce;">= () </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+  </span><span style="color:#bf616a;">foo </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">30</span><span style="color:#c0c5ce;">;
 };
 
-readFoo(); // 3
-changeFoo();
+</span><span style="color:#8fa1b3;">readFoo</span><span style="color:#c0c5ce;">(); </span><span style="color:#65737e;">// 3
+</span><span style="color:#8fa1b3;">changeFoo</span><span style="color:#c0c5ce;">();
 
-// Heel
+</span><span style="color:#65737e;">// Heel
 // Veel
 // Andere
 // Code
 
-readFoo(); // 30
+</span><span style="color:#8fa1b3;">readFoo</span><span style="color:#c0c5ce;">(); </span><span style="color:#65737e;">// 30
 </span></code></pre>
 <p>Maar hoe schrijf je je code dan? →</p>
 <p><a href="https://faq.wincacademy.nl/waarom-is-het-goed-om-functies-alles-mee-te-geven-dat-ze-nodig-hebben/">Waarom is het goed om functies alles mee te geven dat ze nodig hebben?</a></p>

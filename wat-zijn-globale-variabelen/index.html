@@ -27,25 +27,25 @@
 <h1 id="wat-zijn-globale-variabelen">Wat zijn globale variabelen?</h1>
 <p>Het korte antwoord: globale variabelen zijn variabelen die <em>buiten</em> functies zijn gemaakt. Vanwege de 'scope' regels in JavaScript kan alle code bij die globale variabelen en ze dus ook lezen én aanpassen. Voorbeeld:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let foo = 3;
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">let </span><span style="color:#bf616a;">foo </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">;
 
-const readFoo = () =&gt; {
-  console.log(foo);
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">readFoo </span><span style="color:#c0c5ce;">= () </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+  </span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">foo</span><span style="color:#c0c5ce;">);
 };
 
-const changeFoo = () =&gt; {
-  foo = 30;
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">changeFoo </span><span style="color:#c0c5ce;">= () </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+  </span><span style="color:#bf616a;">foo </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">30</span><span style="color:#c0c5ce;">;
 };
 
-readFoo(); // 3
-changeFoo();
+</span><span style="color:#8fa1b3;">readFoo</span><span style="color:#c0c5ce;">(); </span><span style="color:#65737e;">// 3
+</span><span style="color:#8fa1b3;">changeFoo</span><span style="color:#c0c5ce;">();
 
-// Heel
+</span><span style="color:#65737e;">// Heel
 // Veel
 // Andere
 // Code
 
-readFoo(); // 30
+</span><span style="color:#8fa1b3;">readFoo</span><span style="color:#c0c5ce;">(); </span><span style="color:#65737e;">// 30
 </span></code></pre>
 <p>Zie ook </p>
 <p><a href="https://www.notion.so/JS-Scoping-global-vs-local-scope-e38aed4fecae4ce48c5736013319935c">JS: Scoping: global vs local scope</a></p>

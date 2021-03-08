@@ -46,38 +46,38 @@ een REST API en zijn tot je beschikking in de vorm van een JavaScript array.</p>
 </span></code></pre>
 <p>De array met producten ziet er als volgt uit:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const products = [
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">products </span><span style="color:#c0c5ce;">= [
     {
-        name: &#39;Macbook Pro&#39;,
-        price: 2849.99,
-        brand: &#39;Apple&#39;
+        name: &#39;</span><span style="color:#a3be8c;">Macbook Pro</span><span style="color:#c0c5ce;">&#39;,
+        price: </span><span style="color:#d08770;">2849.99</span><span style="color:#c0c5ce;">,
+        brand: &#39;</span><span style="color:#a3be8c;">Apple</span><span style="color:#c0c5ce;">&#39;
     },
     {
-        name: &#39;Windows Surface Pro&#39;,
-        price: 2750.00,
-        brand: &#39;Microsoft&#39;
+        name: &#39;</span><span style="color:#a3be8c;">Windows Surface Pro</span><span style="color:#c0c5ce;">&#39;,
+        price: </span><span style="color:#d08770;">2750.00</span><span style="color:#c0c5ce;">,
+        brand: &#39;</span><span style="color:#a3be8c;">Microsoft</span><span style="color:#c0c5ce;">&#39;
     },
     {
-        name: &#39;Asus Ultrabook&#39;,
-        price: 1680.80,
-        brand: &#39;Asus&#39;
+        name: &#39;</span><span style="color:#a3be8c;">Asus Ultrabook</span><span style="color:#c0c5ce;">&#39;,
+        price: </span><span style="color:#d08770;">1680.80</span><span style="color:#c0c5ce;">,
+        brand: &#39;</span><span style="color:#a3be8c;">Asus</span><span style="color:#c0c5ce;">&#39;
     }
 ]
 </span></code></pre>
 <p>Nu kunnen we de DOM manipuleren met JavaScript zodat de producten van de klant worden getoond in het lijstje (<code>ul.products</code>) van het winkelwagentje:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const itemsInCart = document.querySelector(&#39;.products&#39;);
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">itemsInCart </span><span style="color:#c0c5ce;">= document.</span><span style="color:#96b5b4;">querySelector</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">.products</span><span style="color:#c0c5ce;">&#39;);
 
-// (1) loop door de producten
-products.forEach((product) =&gt; {
-    // (2) maak een nieuw &lt;li&gt; element aan
-    const li = document.createElement(&#39;li&#39;);
+</span><span style="color:#65737e;">// (1) loop door de producten
+</span><span style="color:#bf616a;">products</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">forEach</span><span style="color:#c0c5ce;">((</span><span style="color:#bf616a;">product</span><span style="color:#c0c5ce;">) </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+    </span><span style="color:#65737e;">// (2) maak een nieuw &lt;li&gt; element aan
+    </span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">li </span><span style="color:#c0c5ce;">= document.</span><span style="color:#96b5b4;">createElement</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">li</span><span style="color:#c0c5ce;">&#39;);
 
-    // (3) voeg de producttekst toe aan het element
-    li.innerText = `${product.name} (€${product.price})`;
+    </span><span style="color:#65737e;">// (3) voeg de producttekst toe aan het element
+    </span><span style="color:#bf616a;">li</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">innerText </span><span style="color:#c0c5ce;">= `</span><span style="color:#a3be8c;">${</span><span style="color:#bf616a;">product</span><span style="color:#a3be8c;">.name} (€${</span><span style="color:#bf616a;">product</span><span style="color:#a3be8c;">.</span><span style="color:#bf616a;">price</span><span style="color:#a3be8c;">})</span><span style="color:#c0c5ce;">`;
 
-    // (4) voeg het element toe aan de lijst van het winkelwagentje
-    itemsInCart.appendChild(li);
+    </span><span style="color:#65737e;">// (4) voeg het element toe aan de lijst van het winkelwagentje
+    </span><span style="color:#bf616a;">itemsInCart</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">appendChild</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">li</span><span style="color:#c0c5ce;">);
 });
 </span></code></pre>
 <p>Het eindresultaat ziet er als volgt uit:</p>

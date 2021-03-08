@@ -28,14 +28,14 @@
 <p>We say code is 'deeply nested' when your program can take a lot of different paths in a code block. This can easily happen when you have a lot of nested conditional statements. But it can also happen with other kinds of code.</p>
 <p>An example in JavaScript:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const startCar = person =&gt; {
-    if (person.age &gt;= 18) {
-        if (hasDriversLicense(person)) {
-            if (hasCar(person)) {
-                if (getFuelInLiters(getCar(person)) &gt; 5) {
-                    let car = getCar(person);
-                    car.start();
-                    car.drive();
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">startCar </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">age </span><span style="color:#c0c5ce;">&gt;= </span><span style="color:#d08770;">18</span><span style="color:#c0c5ce;">) {
+        </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">hasDriversLicense</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) {
+            </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">hasCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) {
+                </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">getFuelInLiters</span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) &gt; </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">) {
+                    </span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">car </span><span style="color:#c0c5ce;">= </span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">);
+                    </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">start</span><span style="color:#c0c5ce;">();
+                    </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">drive</span><span style="color:#c0c5ce;">();
                 }
             }
         }
@@ -44,47 +44,47 @@
 </span></code></pre>
 <p>Another example:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// Check if item is available for sale
-if (item.IsAvailableForSale)
+<code class="language-js" data-lang="js"><span style="color:#65737e;">// Check if item is available for sale
+</span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">item</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">IsAvailableForSale</span><span style="color:#c0c5ce;">)
 {
-    // Check if payment has been made
-    if (payment.IsPaymentMade)
+    </span><span style="color:#65737e;">// Check if payment has been made
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">payment</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">IsPaymentMade</span><span style="color:#c0c5ce;">)
     {
-        // Check if amount paid is sufficient
-        if (payment.Amount &gt;= item.Price)   
+        </span><span style="color:#65737e;">// Check if amount paid is sufficient
+        </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">payment</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">Amount </span><span style="color:#c0c5ce;">&gt;= </span><span style="color:#bf616a;">item</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">Price</span><span style="color:#c0c5ce;">)   
         {
-            // Check if the item has stock in store
-            if (store.HasStock(item.Id))        
+            </span><span style="color:#65737e;">// Check if the item has stock in store
+            </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">store</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">HasStock</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">item</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">Id</span><span style="color:#c0c5ce;">))        
             {
-                // Place order from store
-            }
-            else
-            {
-                // Check if the item has stock in warehouse
-                if (warehouse.HasStock(item.Id))    
+                </span><span style="color:#65737e;">// Place order from store
+            </span><span style="color:#c0c5ce;">}
+            </span><span style="color:#b48ead;">else
+            </span><span style="color:#c0c5ce;">{
+                </span><span style="color:#65737e;">// Check if the item has stock in warehouse
+                </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">warehouse</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">HasStock</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">item</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">Id</span><span style="color:#c0c5ce;">))    
                 {
-                    // Place order from warehouse
-                }
-                else
-                {
-                    // Out of stock
-                }
+                    </span><span style="color:#65737e;">// Place order from warehouse
+                </span><span style="color:#c0c5ce;">}
+                </span><span style="color:#b48ead;">else
+                </span><span style="color:#c0c5ce;">{
+                    </span><span style="color:#65737e;">// Out of stock
+                </span><span style="color:#c0c5ce;">}
             }
         }
-        else
-        {
-            // Insufficient funds
-        }
+        </span><span style="color:#b48ead;">else
+        </span><span style="color:#c0c5ce;">{
+            </span><span style="color:#65737e;">// Insufficient funds
+        </span><span style="color:#c0c5ce;">}
     }
-    else 
-    {
-        // Ask for payment
-    }
+    </span><span style="color:#b48ead;">else 
+    </span><span style="color:#c0c5ce;">{
+        </span><span style="color:#65737e;">// Ask for payment
+    </span><span style="color:#c0c5ce;">}
 }
-else
-{
-    // Product is not available
-}
+</span><span style="color:#b48ead;">else
+</span><span style="color:#c0c5ce;">{
+    </span><span style="color:#65737e;">// Product is not available
+</span><span style="color:#c0c5ce;">}
 </span></code></pre>
 <p>Deeply nested code is problematic for a number of reasons:</p>
 <p><strong>Understanding code is harder</strong></p>
@@ -101,94 +101,94 @@ else
 <p>When you're inside of a function (and most code is written in functions) it's often a good idea to pre-check certain conditions before going deeper into the function. If those conditions are not met we can jump out of the function early.</p>
 <p>For example:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// Deeply nested
-const startCar = person =&gt; {
-    if (person.age &gt;= 18) {
-        if (hasDriversLicense(person)) {
-            if (hasCar(person)) {
-                if (getFuelInLiters(getCar(person)) &gt; 5) {
-                    let car = getCar(person);
-                    car.start();
-                    car.drive();
+<code class="language-js" data-lang="js"><span style="color:#65737e;">// Deeply nested
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">startCar </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">age </span><span style="color:#c0c5ce;">&gt;= </span><span style="color:#d08770;">18</span><span style="color:#c0c5ce;">) {
+        </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">hasDriversLicense</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) {
+            </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">hasCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) {
+                </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">getFuelInLiters</span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) &gt; </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">) {
+                    </span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">car </span><span style="color:#c0c5ce;">= </span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">);
+                    </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">start</span><span style="color:#c0c5ce;">();
+                    </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">drive</span><span style="color:#c0c5ce;">();
                 }
             }
         }
     }
 };
 
-// Early returns
-const startCar = person =&gt; {
-    if (person.age &lt; 18) return;
-    if (!hasDriversLicense(person)) return;
-    if (!hasCar(person)) return;
-    if (getFuelInLiters(getCar(person)) &lt;= 5) return;
+</span><span style="color:#65737e;">// Early returns
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">startCar </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">age </span><span style="color:#c0c5ce;">&lt; </span><span style="color:#d08770;">18</span><span style="color:#c0c5ce;">) </span><span style="color:#b48ead;">return</span><span style="color:#c0c5ce;">;
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(!</span><span style="color:#8fa1b3;">hasDriversLicense</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) </span><span style="color:#b48ead;">return</span><span style="color:#c0c5ce;">;
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(!</span><span style="color:#8fa1b3;">hasCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) </span><span style="color:#b48ead;">return</span><span style="color:#c0c5ce;">;
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">getFuelInLiters</span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) &lt;= </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">) </span><span style="color:#b48ead;">return</span><span style="color:#c0c5ce;">;
 
-    let car = getCar(person);
-    car.start();
-    car.drive();
+    </span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">car </span><span style="color:#c0c5ce;">= </span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">);
+    </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">start</span><span style="color:#c0c5ce;">();
+    </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">drive</span><span style="color:#c0c5ce;">();
 };
 </span></code></pre>
 <p>Some people would argue that having a lot early returns in your code is itself problematic, however that's a whole other discussion that we'll not discuss now.</p>
 <p><strong>Inlining conditionals</strong></p>
 <p>Another thing you can do is to gather a bunch of conditionals together, maybe even give them a temporary variable.</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// Deeply nested
-const startCar = person =&gt; {
-    if (person.age &gt;= 18) {
-        if (hasDriversLicense(person)) {
-            if (hasCar(person)) {
-                if (getFuelInLiters(getCar(person)) &gt; 5) {
-                    let car = getCar(person);
-                    car.start();
-                    car.drive();
+<code class="language-js" data-lang="js"><span style="color:#65737e;">// Deeply nested
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">startCar </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">age </span><span style="color:#c0c5ce;">&gt;= </span><span style="color:#d08770;">18</span><span style="color:#c0c5ce;">) {
+        </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">hasDriversLicense</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) {
+            </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">hasCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) {
+                </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">getFuelInLiters</span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) &gt; </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">) {
+                    </span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">car </span><span style="color:#c0c5ce;">= </span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">);
+                    </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">start</span><span style="color:#c0c5ce;">();
+                    </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">drive</span><span style="color:#c0c5ce;">();
                 }
             }
         }
     }
 };
 
-// Inlining conditionals + temporary variables
-const startCar = person =&gt; {
-    const isAdult = person.age &gt;= 18;
-    const hasLicense = hasDriversLicense(person);
-    const carHasEnoughFuel = getFuelInLiters(getCar(person)) &gt; 5;
+</span><span style="color:#65737e;">// Inlining conditionals + temporary variables
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">startCar </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+    </span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">isAdult </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">age </span><span style="color:#c0c5ce;">&gt;= </span><span style="color:#d08770;">18</span><span style="color:#c0c5ce;">;
+    </span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">hasLicense </span><span style="color:#c0c5ce;">= </span><span style="color:#8fa1b3;">hasDriversLicense</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">);
+    </span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">carHasEnoughFuel </span><span style="color:#c0c5ce;">= </span><span style="color:#8fa1b3;">getFuelInLiters</span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) &gt; </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">;
 
-    if (isAdult &amp;&amp; hasLicense &amp;&amp; hasCar(person) &amp;&amp; carHasEnoughFuel) {
-        let car = getCar(person);
-        car.start();
-        car.drive();
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">isAdult </span><span style="color:#c0c5ce;">&amp;&amp; </span><span style="color:#bf616a;">hasLicense </span><span style="color:#c0c5ce;">&amp;&amp; </span><span style="color:#8fa1b3;">hasCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">) &amp;&amp; </span><span style="color:#bf616a;">carHasEnoughFuel</span><span style="color:#c0c5ce;">) {
+        </span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">car </span><span style="color:#c0c5ce;">= </span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">);
+        </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">start</span><span style="color:#c0c5ce;">();
+        </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">drive</span><span style="color:#c0c5ce;">();
     }
 };
 </span></code></pre>
 <p><strong>Use 'helper functions'</strong></p>
 <p>We can make deeply nested code simpler by using functions to divide up our conditionals into different functions.</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">// Deeply nested
-const startCar = person =&gt; {
-    if (person.age &gt;= 18) {
-        if (hasDriversLicense(person)) {
-            if (hasCar(person)) {
-                if (getFuelInLiters(getCar(person)) &gt; 5) {
-                    let car = getCar(person);
-                    car.start();
-                    car.drive();
+<code class="language-js" data-lang="js"><span style="color:#65737e;">// Deeply nested
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">startCar </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">age </span><span style="color:#c0c5ce;">&gt;= </span><span style="color:#d08770;">18</span><span style="color:#c0c5ce;">) {
+        </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">hasDriversLicense</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) {
+            </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">hasCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) {
+                </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">getFuelInLiters</span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">)) &gt; </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">) {
+                    </span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">car </span><span style="color:#c0c5ce;">= </span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">);
+                    </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">start</span><span style="color:#c0c5ce;">();
+                    </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">drive</span><span style="color:#c0c5ce;">();
                 }
             }
         }
     }
 };
 
-// Use helper functions
-const personCanDrive = person =&gt; person.age &gt;= 18 &amp;&amp; hasDriversLicense(person);
-const carCanDrive = car =&gt; getFuelInLiters(car) &gt; 5;
+</span><span style="color:#65737e;">// Use helper functions
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">personCanDrive </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">age </span><span style="color:#c0c5ce;">&gt;= </span><span style="color:#d08770;">18 </span><span style="color:#c0c5ce;">&amp;&amp; </span><span style="color:#8fa1b3;">hasDriversLicense</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">);
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">carCanDrive </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">car </span><span style="color:#b48ead;">=&gt; </span><span style="color:#8fa1b3;">getFuelInLiters</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">) &gt; </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">;
 
-const startCar = person =&gt; {
-    let car = getCar(person);
-    const carHasEnoughFuel = carCanDrive(car);
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">startCar </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person </span><span style="color:#b48ead;">=&gt; </span><span style="color:#c0c5ce;">{
+    </span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">car </span><span style="color:#c0c5ce;">= </span><span style="color:#8fa1b3;">getCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">);
+    </span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">carHasEnoughFuel </span><span style="color:#c0c5ce;">= </span><span style="color:#8fa1b3;">carCanDrive</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">);
 
-    if (personCanDrive(person) &amp;&amp; hasCar(person) &amp;&amp; carHasEnoughFuel) {
-        car.start();
-        car.drive();
+    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(</span><span style="color:#8fa1b3;">personCanDrive</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">) &amp;&amp; </span><span style="color:#8fa1b3;">hasCar</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">) &amp;&amp; </span><span style="color:#bf616a;">carHasEnoughFuel</span><span style="color:#c0c5ce;">) {
+        </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">start</span><span style="color:#c0c5ce;">();
+        </span><span style="color:#bf616a;">car</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">drive</span><span style="color:#c0c5ce;">();
     }
 };
 </span></code></pre>

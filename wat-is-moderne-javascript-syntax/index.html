@@ -29,43 +29,43 @@
 <h3 id="variabelen-aanmaken">Variabelen aanmaken</h3>
 <p>Oud:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">var a = 1;
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">var </span><span style="color:#bf616a;">a </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
 </span></code></pre>
 <p>Nieuw:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const a = 1;
-// of als de waarde moet kunnen veranderen: let
-let b = 2;
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">a </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
+</span><span style="color:#65737e;">// of als de waarde moet kunnen veranderen: let
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">b </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">;
 </span></code></pre><h3 id="functies">Functies</h3>
 <p>Oud:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">function foo () {
-  return 4;
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">function </span><span style="color:#8fa1b3;">foo </span><span style="color:#c0c5ce;">() {
+  </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">;
 }
 </span></code></pre>
 <p>Nieuw:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const foo = () =&gt; 4;
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">foo </span><span style="color:#c0c5ce;">= () </span><span style="color:#b48ead;">=&gt; </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">;
 </span></code></pre><h3 id="strings-aan-elkaar-plakken">Strings aan elkaar plakken</h3>
 <p>Oud:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">&#39;Hello &#39; + name;
+<code class="language-js" data-lang="js"><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">Hello </span><span style="color:#c0c5ce;">&#39; + </span><span style="color:#bf616a;">name</span><span style="color:#c0c5ce;">;
 </span></code></pre>
 <p>Nieuw:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">`Hello ${name}`
+<code class="language-js" data-lang="js"><span style="color:#c0c5ce;">`</span><span style="color:#a3be8c;">Hello ${</span><span style="color:#bf616a;">name</span><span style="color:#a3be8c;">}</span><span style="color:#c0c5ce;">`
 </span></code></pre><h3 id="loops">Loops</h3>
 <p>Oud:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const qux = [1,2,3,4];
-for (var i = 0; i &lt; qux.length; i++){
-  console.log(qux[i]);
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">qux </span><span style="color:#c0c5ce;">= [</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">,</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">,</span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">,</span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">];
+</span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">i </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">; </span><span style="color:#bf616a;">i </span><span style="color:#c0c5ce;">&lt; </span><span style="color:#bf616a;">qux</span><span style="color:#c0c5ce;">.length; </span><span style="color:#bf616a;">i</span><span style="color:#c0c5ce;">++){
+  </span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">qux</span><span style="color:#c0c5ce;">[</span><span style="color:#bf616a;">i</span><span style="color:#c0c5ce;">]);
 }
 </span></code></pre>
 <p>Nieuw:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const qux = [1,2,3,4];
-qux.forEach(console.log);
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">qux </span><span style="color:#c0c5ce;">= [</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">,</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">,</span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">,</span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">];
+</span><span style="color:#bf616a;">qux</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">forEach</span><span style="color:#c0c5ce;">(</span><span style="color:#ebcb8b;">console</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">);
 </span></code></pre>
 <p>Als je loops gebruikt om een nieuw array te maken: gebruik <code>array.map</code>.</p>
 <p>Als je loops gebruikt om elementen te filteren: gebruik <code>array.filter</code>.</p>
@@ -73,33 +73,33 @@ qux.forEach(console.log);
 <p>Voorbeeld gekopieerd van <a href="https://programmingwithmosh.com/javascript/essential-modern-javascript-features/">Mosh</a>.</p>
 <p>Oud:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const person = { 
-   name: &#39;Mosh&#39;, 
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">person </span><span style="color:#c0c5ce;">= { 
+   name: &#39;</span><span style="color:#a3be8c;">Mosh</span><span style="color:#c0c5ce;">&#39;, 
    address: {
       billing: { 
-         street: &#39;123 Flinders st&#39;,
-         city: &#39;Melbourne&#39;,
-         state: &#39;Victoria&#39;
+         street: &#39;</span><span style="color:#a3be8c;">123 Flinders st</span><span style="color:#c0c5ce;">&#39;,
+         city: &#39;</span><span style="color:#a3be8c;">Melbourne</span><span style="color:#c0c5ce;">&#39;,
+         state: &#39;</span><span style="color:#a3be8c;">Victoria</span><span style="color:#c0c5ce;">&#39;
       }
    }
 };
-const street = person.address.billing.street;
-const city = person.address.billing.city;
-const state = person.address.billing.state;
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">street </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">address</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">billing</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">street</span><span style="color:#c0c5ce;">;
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">city </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">address</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">billing</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">city</span><span style="color:#c0c5ce;">;
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">state </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">address</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">billing</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">state</span><span style="color:#c0c5ce;">;
 </span></code></pre>
 <p>Nieuw:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const person = { 
-   name: &#39;Mosh&#39;, 
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">person </span><span style="color:#c0c5ce;">= { 
+   name: &#39;</span><span style="color:#a3be8c;">Mosh</span><span style="color:#c0c5ce;">&#39;, 
    address: {
       billing: { 
-         street: &#39;123 Flinders st&#39;,
-         city: &#39;Melbourne&#39;,
-         state: &#39;Victoria&#39;
+         street: &#39;</span><span style="color:#a3be8c;">123 Flinders st</span><span style="color:#c0c5ce;">&#39;,
+         city: &#39;</span><span style="color:#a3be8c;">Melbourne</span><span style="color:#c0c5ce;">&#39;,
+         state: &#39;</span><span style="color:#a3be8c;">Victoria</span><span style="color:#c0c5ce;">&#39;
       }
    }
 };
-const { street, city, state } = person.address.billing;
+</span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">{ </span><span style="color:#bf616a;">street</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">city</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">state </span><span style="color:#c0c5ce;">} = </span><span style="color:#bf616a;">person</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">address</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">billing</span><span style="color:#c0c5ce;">;
 </span></code></pre>
 
 

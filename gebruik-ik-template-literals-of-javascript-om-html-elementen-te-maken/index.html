@@ -51,28 +51,28 @@ Waarom? Het leest wat lekkerder en het is minder code, en minder code = minder b
   &lt;</span><span style="color:#bf616a;">img </span><span style="color:#d08770;">src</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">trash-delete-icon.jpg</span><span style="color:#c0c5ce;">&#39; </span><span style="color:#d08770;">alt</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">delete icon</span><span style="color:#c0c5ce;">&#39;/&gt;
 &lt;/</span><span style="color:#bf616a;">li</span><span style="color:#c0c5ce;">&gt;
 </span></code></pre><pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const list = document.querySelector(&#39;#list&#39;)
-let newLi = document.createElement(&#39;li&#39;)
-newLi.setAttribute(&#39;class&#39;, status)
-let newImg = document.createElement(&#39;img&#39;)    
-newImg.setAttribute(&#39;alt&#39;, &#39;delete icon&#39;);
-newImg.setAttribute(&#39;src&#39;, &#39;trash-delete-icon.jpg&#39;);
-let newText = document.createElement(&#39;p&#39;)
-newText.innerHTML = task;
-newLi.appendChild(newText);
-newLi.appendChild(newImg);
-list.appendChild(newLi).
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">list </span><span style="color:#c0c5ce;">= document.</span><span style="color:#96b5b4;">querySelector</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">#list</span><span style="color:#c0c5ce;">&#39;)
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">newLi </span><span style="color:#c0c5ce;">= document.</span><span style="color:#96b5b4;">createElement</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">li</span><span style="color:#c0c5ce;">&#39;)
+</span><span style="color:#bf616a;">newLi</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">setAttribute</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">class</span><span style="color:#c0c5ce;">&#39;, </span><span style="color:#bf616a;">status</span><span style="color:#c0c5ce;">)
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">newImg </span><span style="color:#c0c5ce;">= document.</span><span style="color:#96b5b4;">createElement</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">img</span><span style="color:#c0c5ce;">&#39;)    
+</span><span style="color:#bf616a;">newImg</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">setAttribute</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">alt</span><span style="color:#c0c5ce;">&#39;, &#39;</span><span style="color:#a3be8c;">delete icon</span><span style="color:#c0c5ce;">&#39;);
+</span><span style="color:#bf616a;">newImg</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">setAttribute</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">src</span><span style="color:#c0c5ce;">&#39;, &#39;</span><span style="color:#a3be8c;">trash-delete-icon.jpg</span><span style="color:#c0c5ce;">&#39;);
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">newText </span><span style="color:#c0c5ce;">= document.</span><span style="color:#96b5b4;">createElement</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">p</span><span style="color:#c0c5ce;">&#39;)
+</span><span style="color:#bf616a;">newText</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">innerHTML </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">task</span><span style="color:#c0c5ce;">;
+</span><span style="color:#bf616a;">newLi</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">appendChild</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">newText</span><span style="color:#c0c5ce;">);
+</span><span style="color:#bf616a;">newLi</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">appendChild</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">newImg</span><span style="color:#c0c5ce;">);
+</span><span style="color:#bf616a;">list</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">appendChild</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">newLi</span><span style="color:#c0c5ce;">).
 </span></code></pre>
 <p><strong>Alternatief met template literals:</strong></p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">const list = document.querySelector(&#39;#list&#39;);
-const listItemRaw = `
-  &lt;li class=&#39;status&#39;&gt;
-    &lt;p&gt;${task}&lt;/p&gt;
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">const </span><span style="color:#bf616a;">list </span><span style="color:#c0c5ce;">= document.</span><span style="color:#96b5b4;">querySelector</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">#list</span><span style="color:#c0c5ce;">&#39;);
+</span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">listItemRaw </span><span style="color:#c0c5ce;">= `
+</span><span style="color:#a3be8c;">  &lt;li class=&#39;status&#39;&gt;
+    &lt;p&gt;${</span><span style="color:#bf616a;">task</span><span style="color:#a3be8c;">}&lt;/p&gt;
     &lt;img src=&#39;trash-delete-icon.jpg&#39; alt=&#39;delete icon&#39;/&gt;
   &lt;/li&gt;
-`;
-list.insertAdjacentHTML(&#39;beforeend&#39;, listItemRaw);
+</span><span style="color:#c0c5ce;">`;
+</span><span style="color:#bf616a;">list</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">insertAdjacentHTML</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">beforeend</span><span style="color:#c0c5ce;">&#39;, </span><span style="color:#bf616a;">listItemRaw</span><span style="color:#c0c5ce;">);
 </span></code></pre>
 
 

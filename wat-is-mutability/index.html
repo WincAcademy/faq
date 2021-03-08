@@ -37,33 +37,33 @@
 <p>Sommige van deze 'operaties' (dingen die je doet met een variabele) <em>veranderen</em> de variabele. In het Engels 'mutate'. Met andere woorden: als de waarde van een variable <em>anders</em> kan zijn <strong>voor</strong> en <strong>na</strong> de operatie dan was de operatie 'mutable'. Als de waarde van een variable altijd het zelfde is <strong>voor</strong> en <strong>na</strong> de operatie dan was de operatie 'immutable'. </p>
 <p>Voorbeelden:</p>
 <pre style="background-color:#2b303b;">
-<code class="language-jsx" data-lang="jsx"><span style="color:#c0c5ce;">let a = 5;
-let movies = [&#39;Die Hard&#39;, &#39;Robocop&#39;, &#39;Back to the Future&#39;];
+<code class="language-js" data-lang="js"><span style="color:#b48ead;">let </span><span style="color:#bf616a;">a </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">5</span><span style="color:#c0c5ce;">;
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">movies </span><span style="color:#c0c5ce;">= [&#39;</span><span style="color:#a3be8c;">Die Hard</span><span style="color:#c0c5ce;">&#39;, &#39;</span><span style="color:#a3be8c;">Robocop</span><span style="color:#c0c5ce;">&#39;, &#39;</span><span style="color:#a3be8c;">Back to the Future</span><span style="color:#c0c5ce;">&#39;];
 
-// Immutable
-let result = 8 + a;
+</span><span style="color:#65737e;">// Immutable
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">result </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">8 </span><span style="color:#c0c5ce;">+ </span><span style="color:#bf616a;">a</span><span style="color:#c0c5ce;">;
 
-// Immutable
-let numMovies = movies.length;
+</span><span style="color:#65737e;">// Immutable
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">numMovies </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">movies</span><span style="color:#c0c5ce;">.length;
 
-// Mutable
-movies.sort();
+</span><span style="color:#65737e;">// Mutable
+</span><span style="color:#bf616a;">movies</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">sort</span><span style="color:#c0c5ce;">();
 
-// Mutable
-let lastMovie = movies.pop();
+</span><span style="color:#65737e;">// Mutable
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">lastMovie </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">movies</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">pop</span><span style="color:#c0c5ce;">();
 
-// Mutable
-movies.push(&#39;Aliens&#39;);
+</span><span style="color:#65737e;">// Mutable
+</span><span style="color:#bf616a;">movies</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">push</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">Aliens</span><span style="color:#c0c5ce;">&#39;);
 
-// Immutable
-let allMovies = movies.join(&#39;, &#39;);
+</span><span style="color:#65737e;">// Immutable
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">allMovies </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">movies</span><span style="color:#c0c5ce;">.</span><span style="color:#96b5b4;">join</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">, </span><span style="color:#c0c5ce;">&#39;);
 
-// Immutable
-const movieIsNew = function (movie) {
-  // only return true if movie is made after 2000
-  return true;
+</span><span style="color:#65737e;">// Immutable
+</span><span style="color:#b48ead;">const </span><span style="color:#8fa1b3;">movieIsNew </span><span style="color:#c0c5ce;">= </span><span style="color:#b48ead;">function </span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">movie</span><span style="color:#c0c5ce;">) {
+  </span><span style="color:#65737e;">// only return true if movie is made after 2000
+  </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">;
 };
-let newMovies = movies.filter(movieIsNew);
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">newMovies </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">movies</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">filter</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">movieIsNew</span><span style="color:#c0c5ce;">);
 </span></code></pre>
 <p>Met JavaScript maken we zelf ook operaties, namelijk functies 🎉
 Die operaties (functies) die we zelf maken kunnen <em>ook</em> mutable of immutable zijn. Het ligt er dan aan wat we in de functie doen met die variabele.</p>
