@@ -29,9 +29,14 @@
 
 <script>
     $(document).ready(function () {
-        $('#faqtable').DataTable({
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchTerm = urlParams.get('search')
+        var table = $('#faqtable').DataTable({
             "paging": false,
             "order": [[0, "asc"]],
+            "search": {
+                "search": searchTerm
+            },
             "columnDefs": [
                 { "width": "20%", "targets": 1 }
             ],
