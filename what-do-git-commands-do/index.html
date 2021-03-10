@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Winc FAQ">
+    <meta name="author" content="Donatas Rasiukevičius">
+    <title> What do git commands do? |  Winc FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://static.wincacademy.nl/css/style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="https://static.wincacademy.nl/logos/favicon.png">
+</head>
+
+<body>
+    <div class="logo">
+        <img src="https://static.wincacademy.nl/logos/main-logo.png">
+    </div>
+    <section>
+        <header>
+            <a href="/">Frequently Asked Questions</a>
+        </header>
+    </section>
+    
+<h1 id="what-do-git-commands-do">What do git commands do?</h1>
+<p>First, make sure you've read: <a href="https://faq.wincacademy.nl/what-is-git/">what is git?</a>. Now that you
+know what git is for conceptually -- what are each of the commands for?</p>
+<p>Think of git as an assistant that keeps track of your things for you, where
+<em>things</em> are your files. One thing is very important: this assistant doesn't do
+anything you don't ask them to do. Treat them like the robot that they are:</p>
+<ul>
+<li>They don't keep track of files that you haven't asked them to keep track
+of;</li>
+<li>They don't save changes unless you ask them to;</li>
+<li>They don't revert changes unless you ask them to;</li>
+<li>They don't communicate changes you told them about to other assistants unless
+you ask them to.</li>
+</ul>
+<p>That's what all the commands are for!</p>
+<h2 id="git-init">Git Init</h2>
+<ul>
+<li>Command</li>
+</ul>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">git</span><span style="color:#c0c5ce;"> init
+</span></code></pre>
+<ul>
+<li>Real Meaning</li>
+</ul>
+<p>Initialize a git repository.</p>
+<ul>
+<li>Analogy</li>
+</ul>
+<p>Hire an assistant. They have a lot of skills but they haven't done anything
+yet. They are just sitting there waiting for you to give them instructions.</p>
+<h2 id="git-add">Git Add</h2>
+<h3 id="command">Command</h3>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">git</span><span style="color:#c0c5ce;"> add example_file.txt
+</span></code></pre><h3 id="real-meaning">Real Meaning</h3>
+<p>Stage one or multiple files.</p>
+<h3 id="analogy">Analogy</h3>
+<p>Ask the assistant to put some files on their desk.</p>
+<h2 id="git-commit">Git Commit</h2>
+<h3 id="command-1">Command</h3>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">git</span><span style="color:#c0c5ce;"> commit</span><span style="color:#bf616a;"> -m </span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">An example commit message</span><span style="color:#c0c5ce;">&quot;
+</span></code></pre><h3 id="real-meaning-1">Real Meaning</h3>
+<p>Commit some changes.</p>
+<h3 id="analogy-1">Analogy</h3>
+<p>Ask the assistant to create a record of the state of all the files that are
+currently on their desk <em>and all the files that haven't changed</em> together. This
+snapshot will be added to a list of snapshots the assistant holds on to,
+together with the commit message (here: &quot;An example commit message&quot;).</p>
+<h2 id="git-remote-add">Git Remote Add</h2>
+<h3 id="command-2">Command</h3>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#bf616a;">git</span><span style="color:#c0c5ce;"> remote add origin https://github.com/example_user/example_repository.git
+</span></code></pre><h3 id="real-meaning-2">Real Meaning</h3>
+<p>Add a remote named <code>origin</code> located at
+<code>https://github.com/example_user/example_repository.git</code> to the list of
+remotes.</p>
+<h3 id="analogy-2">Analogy</h3>
+<p>Tell the assistant about <em>another assistant of yours</em> that they should prepare
+to communicate with. The assistant takes note of this on a list and does
+nothing else yet.</p>
+<h2 id="git-push">Git Push</h2>
+<h3 id="command-3">Command</h3>
+<pre style="background-color:#2b303b;">
+<code class="language-bash" data-lang="bash"><span style="color:#65737e;"># The first time you need to tell git where you want to push to
+# git push --set-upstream &lt;name_of_the_remote&gt; &lt;name_of_the_local_branch&gt;
+</span><span style="color:#bf616a;">git</span><span style="color:#c0c5ce;"> push</span><span style="color:#bf616a;"> --set-upstream</span><span style="color:#c0c5ce;"> origin master
+
+</span><span style="color:#65737e;"># Afterwards you can just run the command without the extra info attached
+</span><span style="color:#c0c5ce;">git push
+</span></code></pre><h3 id="real-meaning-3">Real Meaning</h3>
+<p>Push current branch to the linked upstream branch. </p>
+<h3 id="analogy-3">Analogy</h3>
+<p>Ask the assistant to send their list of all the snapshots to the other
+assistant you told them about earlier with <code>git remote add</code>. After doing this,
+both assistants will have the same files and administration.</p>
+
+
+
+</body>
+
+</html>
