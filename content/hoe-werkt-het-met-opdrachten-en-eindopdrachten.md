@@ -1,7 +1,7 @@
 +++
 title = "Hoe werkt het met oefeningen en opdrachten?"
 extra.tags =[ "praktisch",]
-created = "Nov 19, 2020 4:03 PM"
+created = "Mar 10, 2021 4:03 PM"
 +++
 
 # Hoe werkt het met oefeningen en opdrachten? Welke worden nagekeken (nakijken)?
